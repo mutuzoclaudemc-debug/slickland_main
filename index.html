@@ -295,483 +295,1176 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 
 /* ══════════ RASA PAGE ══════════ */
 .rasa-page{transition:background .5s,color .5s}
-.body-white{background:#f8f8f8!important}
-.body-white .hero-bg,.body-white .about-sec,.body-white .careers-sec,.body-white .partners-sec,.body-white footer{background:#f8f8f8}
-.body-white .news-sec,.body-white .sv-sec,.body-white .port-sec,.body-white .testi-sec,.body-white .bk-sec,.body-white .contact-sec,.body-white .ing-sec{background:#efefef}
-.body-white .d1,.body-white .nc,.body-white .tq,.body-white .sv,.body-white .po,.body-white .bk-form,.body-white .ct-form,.body-white .ist,.body-white .bk-card{background:#e8e8e8;border-color:rgba(0,0,0,.08)}
-.body-white .d2{background:#e0e0e0}
-.body-white nav{background:rgba(248,248,248,.97)!important;border-bottom:1px solid rgba(0,0,0,.08)}
-.body-white .nav-wordmark,.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.7)}
-.body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:var(--blk);background:rgba(0,0,0,.06)}
-.body-white .sh,.body-white .hero-h1,.body-white .sv-name,.body-white .rq-letter,.body-white .po-name,.body-white .tq-name,.body-white .bk-card-title,.body-white .form-ttl,.body-white .tm-name,.body-white .rname,.body-white .hs-num{color:#0a0a0a}
-.body-white .sp,.body-white .hero-sub,.body-white .sv-desc,.body-white .bk-card-body,.body-white .ft-about-text,.body-white .ft-col ul a,.body-white .ct-lbl,.body-white .rmeta,.body-white .tq-text{color:rgba(0,0,0,.55)}
-.body-white .slbl,.body-white .sv-link,.body-white .nc-tag,.body-white .po-tag,.body-white .rslbl{color:var(--blk)}
-.body-white .slbl::before,.body-white .rslbl::before{background:var(--blk)}
-.body-white .marq{background:var(--blk)}
-.body-white .marq-item{color:var(--y)}
-.body-white .marq-sep{background:var(--y)}
-.body-white .hero-letters{opacity:.08}.body-white .hero-letters-svg{fill:#0A0A0A}
-.body-white .hero-grid{background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px)}
-.body-white .ticker{background:var(--blk)}
-.body-white .ticker-tag{background:var(--y);color:var(--blk)}
-.body-white .ticker-item{color:var(--y)}
-.body-white .ft-copy{color:rgba(0,0,0,.35)}
+
+/* ════════════════════════════════════════════════════════
+   MASTER THEME SYSTEM
+   Override CSS vars at theme container level → everything inherits
+   ════════════════════════════════════════════════════════ */
+
+/* ── WHITE THEME (Slickland page) ── */
+.body-white {
+  background: #f2f2f2 !important;
+  color: #0A0A0A;
+}
+/* White theme — specific overrides for elements that need it */
+.body-white nav{background:rgba(242,242,242,.97)!important;border-bottom-color:rgba(0,0,0,.1)}
+.body-white .nav-wordmark{color:#0A0A0A}
+.body-white .nav-wordmark em{color:#0A0A0A}
+.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65)}
+.body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A;background:rgba(0,0,0,.07)}
+.body-white .nav-links>li>a.active-link{color:#0A0A0A;background:rgba(0,0,0,.07)}
+.body-white .drop{background:#e8e8e8;border-color:rgba(0,0,0,.12)}
+.body-white .drop a{color:rgba(0,0,0,.7)}
+.body-white .drop a:hover{background:rgba(0,0,0,.07);color:#0A0A0A}
+.body-white .talk-btn{background:#0A0A0A;color:#D4FF00}
+.body-white .talk-btn:hover{box-shadow:0 0 0 4px rgba(0,0,0,.15)}
+.body-white .live-pill{background:rgba(255,48,48,.08);border-color:rgba(255,48,48,.25);color:#FF3030}
+.body-white .ticker{background:#0A0A0A}
+.body-white .ticker-tag{background:#D4FF00;color:#0A0A0A}
+.body-white .ticker-item{color:#D4FF00}
+.body-white .ticker-dot{background:#D4FF00}
+.body-white .scroll-strip-inner{display:flex;align-items:center;gap:16px;max-width:1320px;margin:0 auto}
+.scroll-strip{background:var(--blk);border-top:1px solid rgba(212,255,0,.07);border-bottom:1px solid rgba(212,255,0,.04);padding:14px 48px;transition:background .5s}
+.body-white .ss-mouse{border-color:rgba(0,0,0,.3)}
+.body-white .ss-dot{background:#0A0A0A}
+.body-white .scroll-strip span{color:rgba(0,0,0,.45)!important}
+.body-white .ss-line{background:linear-gradient(to right,rgba(0,0,0,.15),transparent)}
+.body-white .marq{background:#0A0A0A}
+.body-white .marq-item{color:#D4FF00}
+.body-white .marq-sep{background:#D4FF00}
+.body-white .scores{background:#dedede;border-color:rgba(0,0,0,.08)}
+.body-white .sc-sport{color:#0A0A0A}
+.body-white .sc-score{color:#0A0A0A}
+.body-white .hero-bg{background:#f2f2f2}
+.body-white .hero-grid{background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px)}
+.body-white .hero-radial{background:radial-gradient(circle,rgba(0,0,0,.04) 0%,transparent 60%)}
+.body-white .hero-line1{color:#0A0A0A}
+.hero-line1{display:block;color:var(--y)}
+.hero-line2{display:block;color:var(--wh)}
+.hero-line3{display:block;margin-top:.1em}
+.rasa-logo-mark svg{color:var(--y)}
+.body-white .hero-line2{color:#0A0A0A}
+.body-white .hero-line3 .rasa-logo-mark svg{color:#0A0A0A}
+.body-white .hs-num{color:#0A0A0A}
+.body-white .hs-lbl{color:rgba(0,0,0,.5)}
+.body-white .eyebrow{background:rgba(0,0,0,.07);border-color:rgba(0,0,0,.15)}
+.body-white .eyebrow span{color:#0A0A0A}
+.body-white .eyebrow-dot{background:#0A0A0A}
+.body-white .hero-sub{color:rgba(0,0,0,.6)}
+.body-white .btn-primary{background:#0A0A0A;color:#D4FF00}
+.body-white .btn-primary:hover{box-shadow:0 16px 50px rgba(0,0,0,.25)}
+.body-white .btn-ghost{color:#0A0A0A;border-color:rgba(0,0,0,.2)}
+.body-white .btn-ghost:hover{border-color:#0A0A0A;color:#0A0A0A}
+.body-white .scroll-bar{background:#0A0A0A}
+.body-white .hero-scroll span{color:rgba(0,0,0,.4)}
+.body-white .hero-letters{opacity:.09}
+.body-white .hero-letters-svg{fill:#0A0A0A}
+.body-white .slbl{color:#0A0A0A}
+.body-white .slbl::before{background:#0A0A0A}
+.body-white .sh{color:#0A0A0A}
+.body-white .sh .y{color:#0A0A0A}
+.body-white .sp{color:rgba(0,0,0,.6)}
+.body-white .nc-tag{background:#0A0A0A;color:#D4FF00}
+.body-white .nc-arr{background:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .nc:hover .nc-arr{background:#0A0A0A;color:#D4FF00}
+.body-white .nc-bg{color:rgba(0,0,0,.04)}
+.body-white .nc-title{color:#0A0A0A}
+.body-white .nc-date{color:rgba(0,0,0,.4)}
+.body-white .ntab{color:rgba(0,0,0,.4)}
+.body-white .ntab.on,.body-white .ntab:hover{color:#0A0A0A;border-bottom-color:#0A0A0A}
+.body-white .float-tag{background:#dedede;border-color:rgba(0,0,0,.12)}
+.body-white .ft-num{color:#0A0A0A}
+.body-white .ft-lbl{color:rgba(0,0,0,.45)}
+.body-white .float-tag2{background:#0A0A0A}
+.body-white .ft2-text{color:#D4FF00}
+.body-white .pill{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.15);color:rgba(0,0,0,.65)}
+.body-white .sv-icon{background:#0A0A0A}
+.body-white .sv-name{color:#0A0A0A}
+.body-white .sv-desc{color:rgba(0,0,0,.55)}
+.body-white .sv-link{color:#0A0A0A}
+.body-white .sv::after{background:#0A0A0A}
+.body-white .sv-num{color:rgba(0,0,0,.06)}
+.body-white .pf.on,.body-white .pf:hover{background:#0A0A0A;color:#D4FF00;border-color:#0A0A0A}
+.body-white .po-tag{color:#0A0A0A}
+.body-white .po-line{background:#0A0A0A}
+.body-white .ist-num{color:#0A0A0A}
+.body-white .ist{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1)}
+.body-white .ist:hover{background:rgba(0,0,0,.09);border-color:rgba(0,0,0,.18)}
+.body-white .pchip{background:#dedede;border-color:rgba(0,0,0,.08);color:rgba(0,0,0,.45)}
+.body-white .pchip:hover{color:#0A0A0A;border-color:rgba(0,0,0,.3)}
+.body-white .p-lbl{color:rgba(0,0,0,.4)}
+.body-white .tq{background:#dedede;border-color:rgba(0,0,0,.08)}
+.body-white .tq:hover{border-color:rgba(0,0,0,.25)}
+.body-white .tq-stars{color:#0A0A0A}
+.body-white .tq-text{color:rgba(0,0,0,.65)}
+.body-white .tq-name{color:#0A0A0A}
+.body-white .tq-role{color:rgba(0,0,0,.45)}
+.body-white .tq-av{background:#0A0A0A;color:#D4FF00}
+.body-white .testi-wrap::before{background:linear-gradient(to right,#e8e8e8,transparent)}
+.body-white .testi-wrap::after{background:linear-gradient(to left,#e8e8e8,transparent)}
+.body-white .bk-card{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1)}
+.body-white .bk-card:hover{background:rgba(0,0,0,.09);border-color:rgba(0,0,0,.2)}
+.body-white .bk-card-title{color:#0A0A0A}
+.body-white .bk-card-body{color:rgba(0,0,0,.55)}
+.body-white .bk-card-ico{filter:none}
+.body-white .bk-form{background:#e8e8e8;border-color:rgba(0,0,0,.08)}
+.body-white .form-ttl{color:#0A0A0A}
+.body-white .fg label{color:rgba(0,0,0,.5)}
+.body-white .fg input,.body-white .fg select,.body-white .fg textarea{background:#dedede;border-color:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .fg input::placeholder,.body-white .fg textarea::placeholder{color:rgba(0,0,0,.35)}
+.body-white .fg input:focus,.body-white .fg select:focus,.body-white .fg textarea:focus{border-color:#0A0A0A}
+.body-white .fcheck span{color:rgba(0,0,0,.65)}
+.body-white .rname{color:#0A0A0A}
+.body-white .rbadge{background:rgba(0,0,0,.07);color:#0A0A0A}
+.body-white .rmeta{color:rgba(0,0,0,.45)}
+.body-white .rarr{background:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .role-row:hover .rarr{background:#0A0A0A;color:#D4FF00}
+.body-white .ct-lbl{color:rgba(0,0,0,.45)}
+.body-white .ct-val{color:#0A0A0A}
+.body-white .ct-val a{color:#0A0A0A}
+.body-white .tm{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1)}
+.body-white .tm:hover{border-color:rgba(0,0,0,.22)}
+.body-white .tm-av{background:#0A0A0A;color:#D4FF00}
+.body-white .tm-name{color:#0A0A0A}
+.body-white .tm-role{color:rgba(0,0,0,.45)}
+.body-white .ct-form{background:#e8e8e8;border-color:rgba(0,0,0,.08)}
+.body-white .ft-col-h{color:#0A0A0A}
+.body-white .ft-col ul a{color:rgba(0,0,0,.55)}
+.body-white .ft-col ul a:hover{color:#0A0A0A}
+.body-white .ft-about-text{color:rgba(0,0,0,.55)}
+.body-white .ft-copy{color:rgba(0,0,0,.4)}
+.body-white .ft-copy em{color:#0A0A0A}
 .body-white .soc{background:rgba(0,0,0,.08);color:rgba(0,0,0,.5)}
-.body-white .live-pill{background:rgba(255,48,48,.1);border-color:rgba(255,48,48,.25)}
-.body-white .scores{background:#e8e8e8;border-color:rgba(0,0,0,.06)}
-.body-white .sc-team{color:#0a0a0a}
-.body-white .sport-bar,.body-white .d1.sport-bar{background:#e8e8e8;border-color:rgba(0,0,0,.08)}
-.body-white .sptab{color:rgba(0,0,0,.4)}
-.body-white .sptab.on,.body-white .sptab:hover{color:var(--blk);border-bottom-color:var(--blk)}
-.body-white .role-row{background:#e8e8e8}
-.body-white .role-row:hover{background:#e0e0e0}
-.body-white .rname{color:#0a0a0a}
-.body-white .rbadge{color:var(--blk);background:rgba(0,0,0,.08)}
-.body-white .rarr{background:rgba(0,0,0,.1);color:var(--blk)}
-.body-white .role-row:hover .rarr{background:var(--blk);color:var(--y)}
-.body-white .fg input,.body-white .fg select,.body-white .fg textarea{background:#e0e0e0;border-color:rgba(0,0,0,.1);color:#0a0a0a}
-.body-white .pill{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.12);color:rgba(0,0,0,.6)}
-.body-white .pchip{background:#e0e0e0;border-color:rgba(0,0,0,.08);color:rgba(0,0,0,.4)}
-.body-white .pchip:hover{color:var(--blk);border-color:rgba(0,0,0,.3)}
-.body-white .testi-wrap::before{background:linear-gradient(to right,#efefef,transparent)}
-.body-white .testi-wrap::after{background:linear-gradient(to left,#efefef,transparent)}
-.rasa-page.t-white{background:#f8f8f8;color:#0a0a0a}
-.rasa-page.t-dark{background:var(--blk);color:var(--wh)}
-.rasa-page.t-yellow{background:#D4FF00;color:#0A0A0A}
-.rasa-page.t-light{background:#f5f5f0;color:#0A0A0A}
+.body-white .soc:hover{background:#0A0A0A;color:#D4FF00}
+.body-white footer{border-top-color:rgba(0,0,0,.08)}
+.body-white .sport-bar{background:#e0e0e0;border-color:rgba(0,0,0,.08)}
+.body-white .sptab{color:rgba(0,0,0,.45)}
+.body-white .sptab.on,.body-white .sptab:hover{color:#0A0A0A;border-bottom-color:#0A0A0A}
 
-/* Theme switcher pill */
-.theme-switcher{position:fixed;bottom:32px;right:32px;z-index:500;background:rgba(10,10,10,.9);border:1px solid rgba(212,255,0,.15);border-radius:100px;padding:8px;display:flex;gap:6px;align-items:center;backdrop-filter:blur(12px)}
-.tb{width:32px;height:32px;border-radius:50%;border:2px solid transparent;cursor:none;transition:all .2s;display:flex;align-items:center;justify-content:center}
-.tb:hover{transform:scale(1.15)}
-.tb.on{border-color:rgba(255,255,255,.5);box-shadow:0 0 0 2px rgba(255,255,255,.15)}
-.tb-white{background:#ffffff;border-color:rgba(255,255,255,.3)}
-.tb-dark{background:#0A0A0A}
-.tb-yellow{background:#D4FF00}
-.tb-light{background:#f5f5f0}
+/* ── DARK THEME (default — already correct, just ensure vars) ── */
+.body-dark{background:#070707;color:#ffffff;}
 
-/* RASA hero */
-.rh{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:152px}
-.rh-bg{position:absolute;inset:0;transition:background .5s}
-.t-dark .rh-bg{background:var(--blk)}
+/* ── RASA YELLOW THEME ── */
+.t-yellow{
+  --rp-bg: #D4FF00;
+  --rp-text: #0A0A0A;
+  --rp-card: rgba(0,0,0,.08);
+  --rp-border: rgba(0,0,0,.12);
+  background:#D4FF00;color:#0A0A0A;
+}
 .t-yellow .rh-bg{background:#D4FF00}
-.t-light .rh-bg{background:#f5f5f0}
-.rh-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,255,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,255,0,.025) 1px,transparent 1px);background-size:72px 72px;animation:gridDrift 30s linear infinite}
-.t-yellow .rh-grid,.t-light .rh-grid{background-image:linear-gradient(rgba(0,0,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.06) 1px,transparent 1px)}
-.rh-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80vw;height:80vw;background:radial-gradient(circle,rgba(212,255,0,.09) 0%,transparent 60%);animation:gP 6s ease-in-out infinite alternate}
-.t-yellow .rh-glow,.t-light .rh-glow{opacity:0}
-@keyframes gP{0%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(1.2)}}
+.t-yellow .rh-grid{background-image:linear-gradient(rgba(0,0,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.06) 1px,transparent 1px)}
+.t-yellow .rh-glow{opacity:0}
+.t-yellow .rh-title{color:#0A0A0A}
+.t-yellow .rh-tagline{color:#0A0A0A}
+.t-yellow .rh-year{color:rgba(0,0,0,.55)}
+.t-yellow .rh-sub{color:rgba(0,0,0,.65)}
+.t-yellow .rslbl{color:rgba(0,0,0,.55)}
+.t-yellow .rslbl::before{background:rgba(0,0,0,.45)}
+.t-yellow .rsh{color:#0A0A0A}
+.t-yellow .rsh .y{color:#0A0A0A}
+.t-yellow .rsp{color:rgba(0,0,0,.65)}
+.t-yellow .rsec{background:#D4FF00}
+.t-dark .rsec{background:var(--blk)}
+.t-dark .rsec.alt{background:var(--d1)}
+.t-yellow .rsec.alt{background:rgba(0,0,0,.07)}
+.t-yellow .rsec.alt .rsh,.t-yellow .rsec.alt .rsp{color:#D4FF00}
+.t-yellow .rsec.alt .rslbl{color:rgba(212,255,0,.6)}
+.t-yellow .rsec.alt .rslbl::before{background:rgba(212,255,0,.5)}
+.t-yellow .aw-card{background:rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.08)}
+.t-yellow .aw-card:hover{background:rgba(0,0,0,.15)}
+.t-yellow .aw-card::after{background:#0A0A0A}
+.t-yellow .aw-name{color:#0A0A0A}
+.t-yellow .aw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .aw-num{color:rgba(0,0,0,.06)}
+.t-yellow .aw-ico{filter:none}
+.t-yellow .hw-step{background:rgba(0,0,0,.09)}
+.t-yellow .hw-title{color:#0A0A0A}
+.t-yellow .hw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .hw-num{color:rgba(0,0,0,.25)}
+.t-yellow .r-stats{background:#0A0A0A}
+.t-yellow .r-stat-n{color:#D4FF00}
+.t-yellow .r-stat-l{color:rgba(212,255,0,.55)}
+.t-yellow .r-stat{border-right-color:rgba(212,255,0,.1)}
+.t-yellow .r-vote{background:#0A0A0A}
+.t-yellow .vote-title{color:#D4FF00}
+.t-yellow .vote-sub{color:rgba(212,255,0,.65)}
+.t-yellow .btn-dk{background:#D4FF00;color:#0A0A0A}
+.t-yellow .btn-dk-out{color:#D4FF00;border-color:rgba(212,255,0,.4)}
+.t-yellow .rg-item{background:rgba(0,0,0,.12)}
+.t-yellow .rg-bg{color:rgba(0,0,0,.18)!important;background:rgba(0,0,0,.1)!important}
+.t-yellow .rg-ov{background:linear-gradient(to top,rgba(0,0,0,.93),transparent)}
+.t-yellow .rg-tag{color:#D4FF00}
+.t-yellow .rg-name{color:#ffffff}
+.t-yellow .rg-meta{color:rgba(255,255,255,.55)}
+.t-yellow .rg-line{background:#0A0A0A}
+.t-yellow .cw-lbl{color:rgba(0,0,0,.5)}
+.t-yellow .cw-tag{color:rgba(0,0,0,.6)}
+.t-yellow .cw.on .cw-box{border-color:rgba(0,0,0,.5)}
+.t-yellow .scroll-mouse{border-color:rgba(0,0,0,.3)}
+.t-yellow .scroll-dot{background:#0A0A0A}
+.t-yellow #rasa-scroll-ind{background:transparent}
+.t-yellow #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
+.t-yellow .r-foot{background:#0A0A0A}
+.t-yellow .r-foot-text{color:rgba(212,255,0,.65)}
+.t-yellow .r-foot-h{color:rgba(212,255,0,.5)}
+.t-yellow .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-yellow .r-foot-links a:hover{color:#D4FF00!important}
+.t-yellow .r-foot-back{color:rgba(212,255,0,.6)}
+.t-yellow .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-yellow .r-foot-bar{border-top-color:rgba(212,255,0,.12)}
+.t-yellow #rfTitle{color:#D4FF00}
+.t-yellow .r-soc{background:rgba(212,255,0,.12);color:rgba(212,255,0,.7)}
+.t-yellow .r-soc:hover{background:#D4FF00!important;color:#0A0A0A!important}
 
+/* ── RASA LIGHT THEME ── */
+.t-light{
+  --rp-bg: #f5f5f0;
+  --rp-text: #0A0A0A;
+  background:#f5f5f0;color:#0A0A0A;
+}
+.t-light .rh-bg{background:#f5f5f0}
+.t-light .rh-grid{background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px)}
+.t-light .rh-glow{opacity:0}
+.t-light .rh-title{color:#0A0A0A}
+.t-light .rh-tagline{color:#0A0A0A}
+.t-light .rh-year{color:rgba(0,0,0,.5)}
+.t-light .rh-sub{color:rgba(0,0,0,.6)}
+.t-light .rslbl{color:rgba(0,0,0,.55)}
+.t-light .rslbl::before{background:rgba(0,0,0,.4)}
+.t-light .rsh{color:#0A0A0A}
+.t-light .rsh .y{color:#0A0A0A}
+.t-light .rsp{color:rgba(0,0,0,.6)}
+.t-light .rsec{background:#f5f5f0}
+.t-light .rsec.alt{background:#ebebE6}
+.t-light .aw-card{background:rgba(0,0,0,.05);border:1px solid rgba(0,0,0,.07)}
+.t-light .aw-card:hover{background:rgba(0,0,0,.09)}
+.t-light .aw-card::after{background:#0A0A0A}
+.t-light .aw-name{color:#0A0A0A}
+.t-light .aw-desc{color:rgba(0,0,0,.6)}
+.t-light .aw-num{color:rgba(0,0,0,.05)}
+.t-light .hw-step{background:rgba(0,0,0,.06)}
+.t-light .hw-title{color:#0A0A0A}
+.t-light .hw-desc{color:rgba(0,0,0,.6)}
+.t-light .hw-num{color:rgba(0,0,0,.22)}
+.t-light .r-stats{background:#0A0A0A}
+.t-light .r-stat-n{color:#D4FF00}
+.t-light .r-stat-l{color:rgba(212,255,0,.55)}
+.t-light .r-stat{border-right-color:rgba(212,255,0,.1)}
+.t-light .r-vote{background:#0A0A0A}
+.t-light .vote-title{color:#D4FF00}
+.t-light .vote-sub{color:rgba(212,255,0,.65)}
+.t-light .btn-dk{background:#D4FF00;color:#0A0A0A}
+.t-light .btn-dk-out{color:#D4FF00;border-color:rgba(212,255,0,.4)}
+.t-light .rg-item{background:rgba(0,0,0,.08)}
+.t-light .rg-bg{color:rgba(0,0,0,.14)!important;background:rgba(0,0,0,.07)!important}
+.t-light .rg-ov{background:linear-gradient(to top,rgba(0,0,0,.93),transparent)}
+.t-light .rg-tag{color:#D4FF00}
+.t-light .rg-name{color:#ffffff}
+.t-light .rg-meta{color:rgba(255,255,255,.55)}
+.t-light .rg-line{background:#0A0A0A}
+.t-light .cw-lbl{color:rgba(0,0,0,.5)}
+.t-light .cw-tag{color:rgba(0,0,0,.6)}
+.t-light .cw.on .cw-box{border-color:rgba(0,0,0,.5)}
+.t-light .scroll-mouse{border-color:rgba(0,0,0,.3)}
+.t-light .scroll-dot{background:#0A0A0A}
+.t-light #rasa-scroll-ind{background:transparent}
+.t-light #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
+.t-light .r-foot{background:#0A0A0A}
+.t-light .r-foot-text{color:rgba(212,255,0,.65)}
+.t-light .r-foot-h{color:rgba(212,255,0,.5)}
+.t-light .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-light .r-foot-links a:hover{color:#D4FF00!important}
+.t-light .r-foot-back{color:rgba(212,255,0,.6)}
+.t-light .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-light .r-foot-bar{border-top-color:rgba(212,255,0,.12)}
+.t-light #rfTitle{color:#D4FF00}
+.t-light .r-soc{background:rgba(0,0,0,.08);color:rgba(0,0,0,.55)}
+.t-light .r-soc:hover{background:#0A0A0A!important;color:#D4FF00!important}
+
+/* ── RASA DARK THEME (default — ensure all text visible) ── */
+.t-dark .rh-title{color:#ffffff}
+.t-dark .rh-tagline{color:#D4FF00}
+.t-dark .rh-year{color:#D4FF00}
+.t-dark .rh-sub{color:rgba(255,255,255,.55)}
+.t-dark .rsh{color:#ffffff}
+.t-dark .rsh .y{color:#D4FF00}
+.t-dark .rsp{color:rgba(255,255,255,.5)}
+.t-dark .rslbl{color:#D4FF00}
+.t-dark .aw-name{color:#ffffff}
+.t-dark .aw-desc{color:rgba(255,255,255,.45)}
+.t-dark .hw-title{color:#ffffff}
+.t-dark .hw-desc{color:rgba(255,255,255,.45)}
+.t-dark .hw-num{color:#D4FF00}
+.t-dark .vote-title{color:#0A0A0A}
+.t-dark .vote-sub{color:rgba(0,0,0,.6)}
+.t-dark .btn-dk{background:#0A0A0A;color:#D4FF00}
+.t-dark .btn-dk-out{color:#0A0A0A;border-color:rgba(0,0,0,.2)}
+.t-dark .r-foot-back{color:rgba(0,0,0,.55)}
+.t-dark .r-foot-copy{color:rgba(0,0,0,.4)}
+.t-dark #rfTitle{color:rgba(0,0,0,.85)}
+.t-dark .r-foot-text{color:rgba(0,0,0,.6)}
+.t-dark .r-foot-h{color:rgba(0,0,0,.45)}
+.t-dark .r-foot-links a{color:rgba(0,0,0,.65)}
+.t-dark .r-foot-bar{border-top-color:rgba(0,0,0,.12)}
+.t-dark .r-soc{background:rgba(0,0,0,.12);color:rgba(0,0,0,.55)}
+.t-dark .r-soc:hover{background:#0A0A0A!important;color:#D4FF00!important}
+.t-dark .cw-lbl{color:rgba(255,255,255,.4)}
+.t-dark .cw-tag{color:#D4FF00}
+.t-dark .rg-bg{color:rgba(212,255,0,.06)}
+.t-dark .rg-tag{color:#D4FF00}
+.t-dark .r-stat-n{color:#0A0A0A}
+.t-dark .r-stat-l{color:rgba(0,0,0,.55)}
+
+/* Ensure theme switcher is always readable */
+#themeSw span{color:rgba(255,255,255,.4)}
+.body-white #themeSw{background:rgba(0,0,0,.85)}
+.body-white #themeSw span{color:rgba(255,255,255,.5)}
+
+/* ── TARGETED VISIBILITY FIXES ──
+   Only adding what's missing — nothing else changes */
+
+/* Slickland white theme — missing elements */
+.body-white .po-meta{color:rgba(0,0,0,.5)}
+.body-white .ist-lbl{color:rgba(0,0,0,.55)}
+
+/* RASA dark theme — elements with white text that need overrides */
+.t-dark .rh-title{color:#ffffff}
+.t-dark .rh-sub{color:rgba(255,255,255,.55)}
+.t-dark .rsh{color:#ffffff}
+.t-dark .rsp{color:rgba(255,255,255,.5)}
+.t-dark .aw-name{color:#ffffff}
+.t-dark .aw-desc{color:rgba(255,255,255,.45)}
+.t-dark .hw-title{color:#ffffff}
+.t-dark .hw-desc{color:rgba(255,255,255,.45)}
+.t-dark .cw-lbl{color:rgba(255,255,255,.4)}
+
+/* RASA yellow theme — elements with white text that need black instead */
+.t-yellow .rh-title{color:#0A0A0A}
+.t-yellow .rh-sub{color:rgba(0,0,0,.65)}
+.t-yellow .rsh{color:#0A0A0A}
+.t-yellow .rsp{color:rgba(0,0,0,.65)}
+.t-yellow .aw-name{color:#0A0A0A}
+.t-yellow .aw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .hw-title{color:#0A0A0A}
+.t-yellow .hw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .cw-lbl{color:rgba(0,0,0,.5)}
+
+/* RASA light theme — same as yellow */
+.t-light .rh-title{color:#0A0A0A}
+.t-light .rh-sub{color:rgba(0,0,0,.6)}
+.t-light .rsh{color:#0A0A0A}
+.t-light .rsp{color:rgba(0,0,0,.6)}
+.t-light .aw-name{color:#0A0A0A}
+.t-light .aw-desc{color:rgba(0,0,0,.6)}
+.t-light .hw-title{color:#0A0A0A}
+.t-light .hw-desc{color:rgba(0,0,0,.6)}
+.t-light .cw-lbl{color:rgba(0,0,0,.5)}
+
+/* ── RASA HERO BASE (restored) ── */
+.rh{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:152px}
 .rh-content{position:relative;z-index:2;text-align:center;padding:0 40px;max-width:960px}
 .rh-logo{display:flex;justify-content:center;margin-bottom:40px;animation:logoIn 1s .2s both}
 @keyframes logoIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
-.rh-year{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.4em;text-transform:uppercase;margin-bottom:20px;display:block;animation:riseUp .8s .6s both}
-.t-dark .rh-year{color:var(--y)}
-.t-yellow .rh-year,.t-light .rh-year{color:rgba(0,0,0,.5)}
-.rh-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-.01em;line-height:.95;margin-bottom:20px;animation:riseUp .8s .8s both}
-.rh-tagline{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(22px,3.5vw,42px);text-transform:uppercase;letter-spacing:.05em;margin-bottom:28px;animation:riseUp .8s 1s both}
-.t-dark .rh-tagline{color:var(--y)}
-.t-yellow .rh-tagline,.t-light .rh-tagline{color:var(--blk)}
-.rh-sub{font-size:17px;font-weight:300;line-height:1.7;max-width:620px;margin:0 auto 48px;animation:riseUp .8s 1.1s both}
-.t-dark .rh-sub{color:rgba(255,255,255,.55)}
-.t-yellow .rh-sub,.t-light .rh-sub{color:rgba(0,0,0,.6)}
-.rh-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;animation:riseUp .8s 1.2s both}
-.rh-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:riseUp .8s 1.4s both}
-.scroll-mouse{width:24px;height:38px;border:2px solid rgba(212,255,0,.4);border-radius:12px;display:flex;justify-content:center;padding-top:6px}
-.t-yellow .scroll-mouse,.t-light .scroll-mouse{border-color:rgba(0,0,0,.3)}
-.scroll-dot{width:4px;height:8px;background:var(--y);border-radius:2px;animation:sD 1.6s ease-in-out infinite}
-.t-yellow .scroll-dot,.t-light .scroll-dot{background:var(--blk)}
-@keyframes sD{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(10px);opacity:.3}}
-.rh-scroll span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gr)}
 
-/* RASA stats bar */
-.r-stats{background:var(--y);padding:0;transition:background .5s}
-.t-yellow .r-stats,.t-light .r-stats{background:#0A0A0A}
-.r-stats-row{display:flex;max-width:1320px;margin:0 auto}
-.r-stat{flex:1;padding:28px 32px;border-right:1px solid rgba(0,0,0,.12);text-align:center}
-.t-yellow .r-stat,.t-light .r-stat{border-right-color:rgba(212,255,0,.1)}
-.r-stat:last-child{border-right:none}
-.r-stat-n{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;color:var(--blk);line-height:1}
-.t-yellow .r-stat-n,.t-light .r-stat-n{color:var(--y)}
-.r-stat-l{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.55);margin-top:4px}
-.t-yellow .r-stat-l,.t-light .r-stat-l{color:rgba(212,255,0,.6)}
+/* ── RASA HERO TEXT — DEFAULT DARK THEME ──
+   These are the BASE colors (dark bg = yellow + white text)
+   Theme overrides below will switch them for yellow/light/white themes */
 
-/* RASA sections */
-.rsec{padding:100px 48px;transition:background .5s,color .5s}
-.t-dark .rsec{background:var(--blk)}
-.t-dark .rsec.alt{background:var(--d1)}
-.t-yellow .rsec,.t-yellow .rsec.alt{background:#D4FF00}
-.t-light .rsec,.t-light .rsec.alt{background:#f5f5f0}
-.rslbl{display:flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:16px}
-.rslbl::before{content:'';width:22px;height:2px;flex-shrink:0}
-.t-dark .rslbl{color:var(--y)}.t-dark .rslbl::before{background:var(--y)}
-.t-yellow .rslbl,.t-light .rslbl{color:rgba(0,0,0,.5)}.t-yellow .rslbl::before,.t-light .rslbl::before{background:rgba(0,0,0,.5)}
-.rsh{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(44px,5.5vw,80px);text-transform:uppercase;line-height:.9;letter-spacing:-.02em;margin-bottom:24px}
-.rsh .y{color:var(--y)}
-.t-yellow .rsh .y,.t-light .rsh .y{color:var(--blk)}
-.rsp{font-size:17px;font-weight:300;line-height:1.72;max-width:520px}
-.t-dark .rsp{color:rgba(255,255,255,.5)}
-.t-yellow .rsp,.t-light .rsp{color:rgba(0,0,0,.6)}
 
-/* Logo colorway swatches */
-.cw-row{display:flex;gap:20px;margin-top:8px;flex-wrap:wrap}
-.cw{display:flex;flex-direction:column;align-items:center;gap:10px;cursor:none}
-.cw-box{width:100px;height:100px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s;border:2px solid transparent}
-.cw:hover .cw-box{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
-.cw.on .cw-box{border-color:rgba(255,255,255,.5)}
-.t-yellow .cw.on .cw-box,.t-light .cw.on .cw-box{border-color:rgba(0,0,0,.5)}
-.cw-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-.t-dark .cw-lbl{color:rgba(255,255,255,.4)}
+/* ── RASA HERO BACKGROUND — DEFAULT DARK ── */
+.t-dark .rh-bg{background:var(--blk)}
+.t-dark .rh-grid{background-image:linear-gradient(rgba(212,255,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,255,0,.025) 1px,transparent 1px);background-size:72px 72px;animation:gridDrift 30s linear infinite;opacity:1}
+.t-dark .rh-glow{background:radial-gradient(circle,rgba(212,255,0,.09) 0%,transparent 60%);animation:gP 6s ease-in-out infinite alternate;opacity:1}
+
+/* ── RASA HERO TEXT OVERRIDES PER THEME ── */
+.t-yellow .rh-year,.t-light .rh-year{color:rgba(0,0,0,.55)}
+.t-yellow .rh-title,.t-light .rh-title{color:#0A0A0A}
+.t-yellow .rh-tagline,.t-light .rh-tagline{color:#0A0A0A}
+.t-yellow .rh-sub,.t-light .rh-sub{color:rgba(0,0,0,.65)}
+
+/* ── RASA SECTIONS TEXT — DEFAULT DARK ── */
+
+
+/* ── RASA SECTIONS TEXT OVERRIDES PER THEME ── */
+.t-yellow .rslbl,.t-light .rslbl{color:rgba(0,0,0,.6)}
+.t-yellow .rslbl::before,.t-light .rslbl::before{background:rgba(0,0,0,.5)}
+.t-yellow .rsh,.t-light .rsh{color:#0A0A0A}
+.t-yellow .rsh .y,.t-light .rsh .y{color:#0A0A0A}
+.t-yellow .rsp,.t-light .rsp{color:rgba(0,0,0,.65)}
+
+/* ── AWARD CARDS TEXT — DEFAULT DARK ── */
+.t-yellow .aw-name,.t-light .aw-name{color:#0A0A0A}
+.t-yellow .aw-desc,.t-light .aw-desc{color:rgba(0,0,0,.65)}
+
+/* ── HOW STEPS TEXT — DEFAULT DARK ── */
+.t-yellow .hw-title,.t-light .hw-title{color:#0A0A0A}
+.t-yellow .hw-desc,.t-light .hw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .hw-num,.t-light .hw-num{color:rgba(0,0,0,.3)}
+
+/* ── CW LABELS ── */
 .t-yellow .cw-lbl,.t-light .cw-lbl{color:rgba(0,0,0,.5)}
-.cw-tag{font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
-.t-dark .cw-tag{color:var(--y)}
 .t-yellow .cw-tag,.t-light .cw-tag{color:rgba(0,0,0,.6)}
 
-/* Award cards */
-.aw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:56px}
-.aw-card{padding:44px 36px;position:relative;overflow:hidden;cursor:none;transition:all .3s}
-.t-dark .aw-card{background:var(--d2)}
-.t-dark .aw-card:hover{background:var(--d3)}
-.t-yellow .aw-card{background:rgba(0,0,0,.06)}
-.t-yellow .aw-card:hover{background:rgba(0,0,0,.12)}
-.t-light .aw-card{background:rgba(0,0,0,.04)}
-.t-light .aw-card:hover{background:rgba(0,0,0,.08)}
-.aw-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--y);transition:width .45s}
-.t-yellow .aw-card::after,.t-light .aw-card::after{background:var(--blk)}
-.aw-card:hover::after{width:100%}
-.aw-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:64px;color:rgba(212,255,0,.08);line-height:1;position:absolute;top:16px;right:20px}
-.t-yellow .aw-num,.t-light .aw-num{color:rgba(0,0,0,.07)}
-.aw-ico{font-size:36px;margin-bottom:20px}
-.aw-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;line-height:1.1}
-.aw-desc{font-size:14px;font-weight:300;line-height:1.65}
-.t-dark .aw-desc{color:rgba(255,255,255,.45)}
-.t-yellow .aw-desc,.t-light .aw-desc{color:rgba(0,0,0,.55)}
+/* ── SCROLL INDICATOR ── */
+.rh-scroll{display:none}
 
-/* How steps */
-.hw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:56px}
-.hw-step{padding:44px 32px;position:relative;cursor:none;transition:background .3s}
-.t-dark .hw-step{background:var(--d2)}
-.t-yellow .hw-step{background:rgba(0,0,0,.06)}
-.t-light .hw-step{background:rgba(0,0,0,.04)}
-.hw-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:56px;line-height:1;margin-bottom:16px;opacity:.7}
-.t-dark .hw-num{color:var(--y)}
-.t-yellow .hw-num,.t-light .hw-num{color:rgba(0,0,0,.35)}
-.hw-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;margin-bottom:12px}
-.hw-desc{font-size:14px;font-weight:300;line-height:1.65}
-.t-dark .hw-desc{color:rgba(255,255,255,.45)}
-.t-yellow .hw-desc,.t-light .hw-desc{color:rgba(0,0,0,.55)}
 
-/* Vote CTA */
-.r-vote{padding:100px 48px;position:relative;overflow:hidden;transition:background .5s}
-.t-dark .r-vote{background:var(--y)}
-.t-yellow .r-vote,.t-light .r-vote{background:#0A0A0A}
-.r-vote::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);background-size:48px 48px}
-.vote-inner{max-width:900px;margin:0 auto;text-align:center;position:relative}
-.vote-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(56px,8vw,110px);text-transform:uppercase;line-height:.88;letter-spacing:-.02em;margin-bottom:20px}
-.t-dark .vote-title{color:var(--blk)}
-.t-yellow .vote-title,.t-light .vote-title{color:var(--y)}
-.vote-sub{font-size:18px;font-weight:300;line-height:1.7;margin-bottom:44px}
-.t-dark .vote-sub{color:rgba(0,0,0,.6)}
-.t-yellow .vote-sub,.t-light .vote-sub{color:rgba(212,255,0,.7)}
-.vote-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
-.btn-dk{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;border:none;transition:transform .25s,box-shadow .25s}
-.t-dark .btn-dk{background:var(--blk);color:var(--y)}
-.t-yellow .btn-dk,.t-light .btn-dk{background:var(--y);color:var(--blk)}
-.btn-dk:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,0,0,.4)}
-.btn-dk-out{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:all .25s}
-.t-dark .btn-dk-out{color:var(--blk);border:2px solid rgba(0,0,0,.2)}
-.t-yellow .btn-dk-out,.t-light .btn-dk-out{color:var(--y);border:2px solid rgba(212,255,0,.3)}
-.btn-dk-out:hover{background:rgba(0,0,0,.08)}
+@keyframes scrollDot{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(10px);opacity:.3}}
+.t-yellow .scroll-mouse,.t-light .scroll-mouse{border-color:rgba(0,0,0,.3)}
+.t-yellow .scroll-dot,.t-light .scroll-dot{background:#0A0A0A}
 
-/* Gallery */
-.rg-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:3px;margin-top:56px}
-.rg-item{position:relative;overflow:hidden;cursor:none}
-.rg-item.tall{grid-row:span 2}
-.t-dark .rg-item{background:var(--d2)}
-.t-yellow .rg-item,.t-light .rg-item{background:rgba(0,0,0,.08)}
-.rg-bg{width:100%;height:100%;min-height:260px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:7vw;color:rgba(212,255,0,.05);text-transform:uppercase;transition:transform .6s;padding:20px;text-align:center;line-height:1}
-.t-yellow .rg-bg,.t-light .rg-bg{color:rgba(0,0,0,.18);background:rgba(0,0,0,.08)!important}
-.rg-item:hover .rg-bg{transform:scale(1.06)}
-.rg-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,7,.96) 0%,transparent 55%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
-.rg-item:hover .rg-ov{opacity:1}
-.rg-line{position:absolute;top:0;left:0;right:0;height:3px;background:var(--y);transform:scaleX(0);transform-origin:left;transition:transform .42s}
-.t-yellow .rg-line,.t-light .rg-line{background:var(--blk)}
-.rg-item:hover .rg-line{transform:scaleX(1)}
-.rg-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--y);font-weight:700;margin-bottom:6px}
-.rg-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;text-transform:uppercase}
-.rg-meta{font-size:12px;color:rgba(255,255,255,.42);margin-top:4px}
+/* ── THEME SWITCHER ── */
+.theme-switcher{position:fixed;bottom:32px;right:32px;z-index:500;background:rgba(10,10,10,.9);border:1px solid rgba(212,255,0,.15);border-radius:100px;padding:8px 14px;display:flex;gap:8px;align-items:center;backdrop-filter:blur(12px)}
+.tb{width:36px;height:36px;border-radius:50%;border:2px solid transparent;cursor:none;transition:all .2s;flex-shrink:0}
+.tb:hover{transform:scale(1.15)}
+.tb.on{border-color:rgba(255,255,255,.7);box-shadow:0 0 0 3px rgba(255,255,255,.15)}
+.tb-white{background:#ffffff}
+.tb-dark{background:#0A0A0A;border-color:rgba(255,255,255,.2)}
+.tb-yellow{background:#D4FF00}
+.tb-light{background:#f5f5f0}
 
-/* RASA Footer */
-.r-foot{padding:60px 48px;transition:background .5s}
-.t-dark .r-foot{background:var(--y)}
-.t-yellow .r-foot,.t-light .r-foot{background:#0A0A0A}
-.r-foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px;max-width:1320px;margin:0 auto}
-.r-foot-text{font-size:14px;font-weight:300;line-height:1.7;max-width:280px;margin-top:12px}
-.t-dark .r-foot-text{color:rgba(0,0,0,.6)}
-.t-yellow .r-foot-text,.t-light .r-foot-text{color:rgba(212,255,0,.6)}
-.r-foot-h{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px}
-.t-dark .r-foot-h{color:rgba(0,0,0,.45)}
-.t-yellow .r-foot-h,.t-light .r-foot-h{color:rgba(212,255,0,.5)}
-.r-foot-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.r-foot-links a{font-size:14px;text-decoration:none;transition:color .2s;cursor:none}
-.t-dark .r-foot-links a{color:rgba(0,0,0,.6)}
-.t-yellow .r-foot-links a,.t-light .r-foot-links a{color:rgba(212,255,0,.65)}
-.r-foot-links a:hover{color:var(--blk) !important}
-.r-foot-bar{border-top:1px solid rgba(0,0,0,.12);margin-top:48px;padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;max-width:1320px;margin-left:auto;margin-right:auto}
-.t-yellow .r-foot-bar,.t-light .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
-.r-foot-copy{font-size:12px}
-.t-dark .r-foot-copy{color:rgba(0,0,0,.45)}
-.t-yellow .r-foot-copy,.t-light .r-foot-copy{color:rgba(212,255,0,.45)}
-.r-foot-back{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:color .2s}
-.t-dark .r-foot-back{color:rgba(0,0,0,.55)}
-.t-yellow .r-foot-back,.t-light .r-foot-back{color:rgba(212,255,0,.6)}
-.r-foot-back:hover{color:var(--blk) !important}
+/* ── RASA HERO BASE ── */
+.rh{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:152px}
+.rh-content{position:relative;z-index:2;text-align:center;padding:0 40px;max-width:960px}
+.rh-logo{display:flex;justify-content:center;margin-bottom:40px}
 
-/* RASA social icons in footer */
-.r-socials{display:flex;gap:10px;margin-top:20px}
-.r-soc{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;text-decoration:none;transition:all .2s;cursor:none}
-.t-dark .r-soc{background:rgba(0,0,0,.15);color:rgba(0,0,0,.6)}
-.t-yellow .r-soc,.t-light .r-soc{background:rgba(212,255,0,.15);color:rgba(212,255,0,.7)}
-.r-soc:hover{background:var(--blk) !important;color:var(--y) !important}
 
-/* RESPONSIVE */
-@media(max-width:1100px){
-  .about-grid,.ing-inner,.bk-inner,.contact-inner{grid-template-columns:1fr;gap:48px}
-  .sv-grid,.port-grid,.aw-grid,.hw-grid{grid-template-columns:repeat(2,1fr)}
-  .ft-grid,.r-foot-grid{grid-template-columns:1fr 1fr;gap:36px}
-  .news-grid,.rg-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
-  .nc.big,.rg-item.tall{grid-row:span 1}
-}
-@media(max-width:768px){
-  section,.rsec{padding:72px 20px}
-  .nav-inner{padding:0 20px}
-  .nav-links,.live-pill{display:none}
-  .sport-bar{display:none}
-  .hero-letters{display:none}
-  .sv-grid,.port-grid,.aw-grid,.hw-grid,.rg-grid{grid-template-columns:1fr}
-  .ft-grid,.r-foot-grid{grid-template-columns:1fr}
-  .news-grid{grid-template-columns:1fr}
-  .hero-stats{right:20px;gap:24px}
-  .hero-content{padding:0 20px}
-  .frow{grid-template-columns:1fr}
-  .role-r .rmeta{display:none}
-  .ticker{display:none}
-  nav{top:0;background:rgba(7,7,7,.98)!important}.hero{margin-top:68px}
-  .theme-switcher{bottom:20px;right:20px}
-  .r-stats-row{flex-wrap:wrap}
-  .r-stat{flex:1 1 50%;border-right:none;border-bottom:1px solid rgba(0,0,0,.08)}
-}
-
-/* Ensure visible text in all RASA themes */
-.t-yellow .rsh,.t-yellow .rh-title,.t-yellow .hw-title,.t-yellow .aw-name,.t-yellow .step-title,.t-yellow .rg-name{color:#0A0A0A}
-.t-light .rsh,.t-light .rh-title,.t-light .hw-title,.t-light .aw-name,.t-light .step-title,.t-light .rg-name{color:#0A0A0A}
-.t-yellow .rh-tagline,.t-light .rh-tagline{color:#0A0A0A;font-weight:900}
+/* Theme overrides */
 .t-yellow .rh-year,.t-light .rh-year{color:rgba(0,0,0,.55)}
-.t-yellow .rslbl,.t-light .rslbl{color:rgba(0,0,0,.55)}
-.t-yellow .rslbl::before,.t-light .rslbl::before{background:rgba(0,0,0,.4)}
-.t-yellow #rasa-scroll-ind,.t-light #rasa-scroll-ind{background:transparent}
-.t-yellow #rasa-scroll-ind span,.t-light #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
-.body-white .hero-h1{color:#0A0A0A}
-.body-white .eyebrow span{color:#0A0A0A}
-.body-white .eyebrow{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.15)}
-.body-white .eyebrow-dot{background:#0A0A0A}
-.body-white .hero-sub{color:rgba(0,0,0,.6)}
-.body-white .hs-num{color:#0A0A0A}
-.body-white .hs-lbl{color:rgba(0,0,0,.5)}
-.body-white .hero-scroll span{color:rgba(0,0,0,.4)}
-.body-white .scroll-bar{background:#0A0A0A}
+.t-yellow .rh-title,.t-light .rh-title{color:#0A0A0A}
+.t-yellow .rh-tagline,.t-light .rh-tagline{color:#0A0A0A}
+.t-yellow .rh-sub,.t-light .rh-sub{color:rgba(0,0,0,.65)}
+.t-yellow .rslbl,.t-light .rslbl{color:rgba(0,0,0,.6)}
+.t-yellow .rslbl::before,.t-light .rslbl::before{background:rgba(0,0,0,.5)}
+.t-yellow .rsh,.t-light .rsh{color:#0A0A0A}
+.t-yellow .rsh .y,.t-light .rsh .y{color:#0A0A0A}
+.t-yellow .rsp,.t-light .rsp{color:rgba(0,0,0,.65)}
+.t-yellow .aw-name,.t-light .aw-name{color:#0A0A0A}
+.t-yellow .aw-desc,.t-light .aw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .hw-title,.t-light .hw-title{color:#0A0A0A}
+.t-yellow .hw-desc,.t-light .hw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .hw-num,.t-light .hw-num{color:rgba(0,0,0,.3)}
+.t-yellow .cw-lbl,.t-light .cw-lbl{color:rgba(0,0,0,.5)}
+.t-yellow .cw-tag,.t-light .cw-tag{color:rgba(0,0,0,.6)}
+.t-dark .r-vote{background:var(--y)}
+.t-dark .vote-title{color:#0A0A0A}
+.t-dark .vote-sub{color:rgba(0,0,0,.6)}
+.t-dark .btn-dk{background:#0A0A0A;color:var(--y)}
+.t-dark .btn-dk-out{color:#0A0A0A;border-color:rgba(0,0,0,.25)}
 
-/* Hero H1 themed lines */
-.hero-h1 .hero-line1{display:block;color:var(--y);font-size:1em}
-.hero-h1 .hero-line2{display:block;color:var(--wh);font-size:1em}
-.hero-h1 .hero-line3{display:block;margin-top:.12em}
-.hero-h1 .rasa-logo-mark{display:inline-flex;align-items:center}
-.hero-h1 .rasa-logo-mark svg{width:.9em;height:.9em;color:var(--y)}
-/* Theme overrides for hero text */
-.body-white .hero-h1 .hero-line2{color:#0A0A0A}
-.body-white .hero-h1 .rasa-logo-mark svg{color:#0A0A0A}
+/* ═══════════════════════════════════════════════════════════
+   RASA PAGE — CLEAN THEME SYSTEM
+   Base = Dark theme (default). Overrides per theme below.
+   White theme = when body has .body-white AND rasa page is active
+   ═══════════════════════════════════════════════════════════ */
 
-/* Scroll strip below hero */
-.scroll-strip{background:var(--blk);border-top:1px solid rgba(212,255,0,.06);border-bottom:1px solid rgba(212,255,0,.04);padding:16px 48px;transition:background .5s}
-.scroll-strip-inner{display:flex;align-items:center;gap:16px;max-width:1320px;margin:0 auto}
-.ss-mouse{width:20px;height:32px;border:2px solid rgba(212,255,0,.35);border-radius:10px;display:flex;justify-content:center;padding-top:5px;flex-shrink:0}
-.ss-dot{width:3px;height:6px;background:var(--y);border-radius:2px;animation:ssDot 1.6s ease-in-out infinite}
-@keyframes ssDot{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(8px);opacity:.3}}
-.scroll-strip span{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:600}
-.ss-line{flex:1;height:1px;background:linear-gradient(to right,rgba(212,255,0,.15),transparent)}
-/* Theme overrides for scroll strip */
-.body-white .scroll-strip{background:#f8f8f8;border-color:rgba(0,0,0,.06)}
-.body-white .ss-mouse{border-color:rgba(0,0,0,.2)}
-.body-white .ss-dot{background:#0A0A0A}
-.body-white .scroll-strip span{color:rgba(0,0,0,.4)}
-.body-white .ss-line{background:linear-gradient(to right,rgba(0,0,0,.12),transparent)}
+/* ── BASE COLORS (dark theme default) ── */
 
-/* ═══ SLICKLAND PAGE — FULL THEME COVERAGE ═══ */
 
-/* ── DARK theme (default) ── */
-.body-dark{background:var(--blk)!important}
 
-/* ── WHITE theme — all sections ── */
-.body-white .scroll-strip{background:#f0f0f0}
-.body-white .scores{background:#e8e8e8}
-.body-white .sc{border-right-color:rgba(0,0,0,.07)}
-.body-white .sc:hover{background:rgba(0,0,0,.03)}
-.body-white .sc-sport{color:#0A0A0A}
-.body-white .sc-score{color:#0A0A0A}
-.body-white .sc-team{color:rgba(0,0,0,.7)}
-.body-white .nc-bg{color:rgba(0,0,0,.04)}
-.body-white .nc-tag{background:#0A0A0A;color:var(--y)}
-.body-white .sv-icon{background:#0A0A0A}
-.body-white .sv-link{color:#0A0A0A}
-.body-white .sv::after{background:#0A0A0A}
-.body-white .ft-col-h{color:#0A0A0A}
-.body-white .ft-copy em{color:#0A0A0A}
-.body-white .soc:hover{background:#0A0A0A;color:var(--y)}
-.body-white .talk-btn{background:#0A0A0A;color:var(--y)}
-.body-white .talk-btn:hover{box-shadow:0 0 0 4px rgba(0,0,0,.15)}
-.body-white .btn-primary{background:#0A0A0A;color:var(--y)}
-.body-white .btn-primary:hover{box-shadow:0 16px 50px rgba(0,0,0,.25)}
-.body-white .btn-ghost{color:#0A0A0A;border-color:rgba(0,0,0,.15)}
-.body-white .btn-ghost:hover{color:#0A0A0A;border-color:#0A0A0A}
-.body-white .nc-arr{background:rgba(0,0,0,.12);color:#0A0A0A}
-.body-white .nc:hover .nc-arr{background:#0A0A0A;color:var(--y)}
-.body-white .live-pill{background:rgba(255,48,48,.08);color:var(--red)}
-.body-white .live-blink{background:var(--red)}
-.body-white .float-tag{background:#e0e0e0;border-color:rgba(0,0,0,.12)}
-.body-white .float-tag2{background:#0A0A0A}
-.body-white .ft2-text{color:var(--y)}
-.body-white .ft-num{color:#0A0A0A}
-.body-white .ft-lbl{color:rgba(0,0,0,.45)}
-.body-white .ist-num{color:#0A0A0A}
-.body-white .tq-stars{color:#0A0A0A}
-.body-white .tq-av{background:#0A0A0A;color:var(--y)}
-.body-white .tq-role{color:rgba(0,0,0,.45)}
-.body-white .tm-role{color:rgba(0,0,0,.45)}
-.body-white .tm-av{background:#0A0A0A;color:var(--y)}
-.body-white .tm:hover{border-color:rgba(0,0,0,.2)}
-.body-white .ct-val{color:#0A0A0A}
-.body-white .ct-val a{color:#0A0A0A}
-.body-white .fg input:focus,.body-white .fg select:focus,.body-white .fg textarea:focus{border-color:#0A0A0A}
-.body-white .rbadge{background:rgba(0,0,0,.06);color:#0A0A0A}
-.body-white .ntab.on,.body-white .ntab:hover{color:#0A0A0A;border-bottom-color:#0A0A0A}
-.body-white .pf.on,.body-white .pf:hover{background:#0A0A0A;color:var(--y);border-color:#0A0A0A}
-.body-white .marq-item{color:var(--y)}
-.body-white .marq-sep{background:var(--y)}
+@keyframes gP{0%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(1.2)}}
 
-/* ═══ RASA PAGE — FULL THEME COVERAGE ═══ */
 
-/* ── RASA YELLOW ── */
+
+
+
+.rslbl::before{background:var(--y)}
+
+
+
+
+
+
+
+
+
+
+
+
+.rsec.alt{background:var(--d1)}
+
+
+
+
+
+
+.btn-dk{background:var(--blk);color:var(--y)}
+.btn-dk-out{color:var(--blk);border:2px solid rgba(0,0,0,.2)}
+
+
+
+.r-foot-links a{color:rgba(0,0,0,.65)}
+
+
+
+#rfTitle{color:rgba(0,0,0,.85)}
+.r-soc{background:rgba(0,0,0,.1);color:rgba(0,0,0,.55)}
+.r-soc:hover{background:var(--blk)!important;color:var(--y)!important}
+
+
+
+
+
+
+#rasa-scroll-ind span{color:rgba(255,255,255,.4)}
+
+/* ── YELLOW THEME ── */
+.t-yellow .rh-bg{background:#D4FF00}
+.t-yellow .rh-grid{background-image:linear-gradient(rgba(0,0,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.06) 1px,transparent 1px)}
+.t-yellow .rh-glow{opacity:0}
+.t-yellow .rh-year{color:rgba(0,0,0,.55)}
+.t-yellow .rh-title{color:#0A0A0A}
+.t-yellow .rh-tagline{color:#0A0A0A}
+.t-yellow .rh-sub{color:rgba(0,0,0,.65)}
+.t-yellow .rslbl{color:rgba(0,0,0,.6)}
+.t-yellow .rslbl::before{background:rgba(0,0,0,.5)}
+.t-yellow .rsh{color:#0A0A0A}
+.t-yellow .rsh .y{color:#0A0A0A}
+.t-yellow .rsp{color:rgba(0,0,0,.65)}
+.t-yellow .aw-name{color:#0A0A0A}
+.t-yellow .aw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .aw-num{color:rgba(0,0,0,.07)}
+.t-yellow .hw-title{color:#0A0A0A}
+.t-yellow .hw-desc{color:rgba(0,0,0,.65)}
+.t-yellow .hw-num{color:rgba(0,0,0,.3);opacity:1}
+.t-yellow .cw-lbl{color:rgba(0,0,0,.5)}
+.t-yellow .cw-tag{color:rgba(0,0,0,.6)}
+.t-yellow .rsec{background:#D4FF00}
+.t-yellow .rsec.alt{background:rgba(0,0,0,.07)}
+.t-yellow .rsec.alt .rsh{color:#D4FF00}
+.t-yellow .rsec.alt .rsp{color:rgba(212,255,0,.75)}
+.t-yellow .rsec.alt .rslbl{color:rgba(212,255,0,.6)}
+.t-yellow .rsec.alt .rslbl::before{background:rgba(212,255,0,.5)}
 .t-yellow .r-stats{background:#0A0A0A}
-.t-yellow .rasa-stats-bar{background:#0A0A0A}
+.t-yellow .r-stat-n{color:var(--y)}
+.t-yellow .r-stat-l{color:rgba(212,255,0,.6)}
 .t-yellow .r-vote{background:#0A0A0A}
 .t-yellow .vote-title{color:var(--y)}
 .t-yellow .vote-sub{color:rgba(212,255,0,.65)}
 .t-yellow .btn-dk{background:var(--y);color:#0A0A0A}
 .t-yellow .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.4)}
-.t-yellow .aw-card{background:rgba(0,0,0,.08)}
-.t-yellow .aw-card:hover{background:rgba(0,0,0,.14)}
-.t-yellow .hw-step{background:rgba(0,0,0,.07)}
-.t-yellow .rsec{background:#D4FF00}
-.t-yellow .rsec.alt{background:rgba(0,0,0,.06)}
 .t-yellow .r-foot{background:#0A0A0A}
 .t-yellow .r-foot-text{color:rgba(212,255,0,.65)}
 .t-yellow .r-foot-h{color:rgba(212,255,0,.5)}
-.t-yellow .r-foot-links a{color:rgba(212,255,0,.65)}
+.t-yellow .r-foot-links a{color:rgba(212,255,0,.7)}
 .t-yellow .r-foot-back{color:rgba(212,255,0,.6)}
 .t-yellow .r-foot-copy{color:rgba(212,255,0,.4)}
 .t-yellow .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
-.t-yellow .rg-bg{color:rgba(0,0,0,.15)!important;background:rgba(0,0,0,.1)!important}
-.t-yellow .rg-ov{background:linear-gradient(to top,rgba(0,0,0,.92),transparent)}
-.t-yellow .cw-lbl{color:rgba(0,0,0,.5)}
-.t-yellow .cw-tag{color:rgba(0,0,0,.6)}
-.t-yellow .rh-sub{color:rgba(0,0,0,.65)}
-.t-yellow .r-stat-n{color:var(--y)}
-.t-yellow .r-stat-l{color:rgba(212,255,0,.6)}
-.t-yellow #rasa-scroll-ind{background:transparent}
-.t-yellow #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
-.t-yellow .rslbl{color:rgba(0,0,0,.55)}
-.t-yellow .rslbl::before{background:rgba(0,0,0,.4)}
-.t-yellow .rsp{color:rgba(0,0,0,.65)}
-.t-yellow .rsh{color:#0A0A0A}
-.t-yellow .rsh .y{color:#0A0A0A;text-decoration:underline;text-decoration-color:rgba(0,0,0,.25)}
-.t-yellow .rh-title{color:#0A0A0A}
-.t-yellow .rh-tagline{color:#0A0A0A}
-.t-yellow .rh-year{color:rgba(0,0,0,.5)}
-.t-yellow .aw-name{color:#0A0A0A}
-.t-yellow .aw-desc{color:rgba(0,0,0,.6)}
-.t-yellow .aw-num{color:rgba(0,0,0,.08)}
-.t-yellow .hw-title{color:#0A0A0A}
-.t-yellow .hw-desc{color:rgba(0,0,0,.6)}
-.t-yellow .hw-num{color:rgba(0,0,0,.3)}
-.t-yellow .aw-card::after{background:#0A0A0A}
-.t-yellow .hw-step{background:rgba(0,0,0,.07)}
+.t-yellow #rfTitle{color:var(--y)}
+.t-yellow .rg-bg{color:rgba(0,0,0,.14)!important;background:rgba(0,0,0,.08)!important}
+.t-yellow .rg-item{background:rgba(0,0,0,.1)}
+.t-yellow .rg-line{background:#0A0A0A}
 .t-yellow .rg-tag{color:var(--y)}
-.t-yellow .rg-name{color:#fff}
-.t-yellow .rg-meta{color:rgba(255,255,255,.6)}
-.t-yellow .scroll-mouse{border-color:rgba(0,0,0,.3)}
-.t-yellow .scroll-dot{background:#0A0A0A}
+.t-yellow #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
 
-/* ── RASA LIGHT ── */
-.t-light .r-stats{background:#0A0A0A}
-.t-light .r-vote{background:#0A0A0A}
-.t-light .vote-title{color:var(--y)}
-.t-light .vote-sub{color:rgba(212,255,0,.65)}
-.t-light .btn-dk{background:var(--y);color:#0A0A0A}
-.t-light .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.4)}
-.t-light .aw-card{background:rgba(0,0,0,.05)}
-.t-light .aw-card:hover{background:rgba(0,0,0,.1)}
-.t-light .hw-step{background:rgba(0,0,0,.05)}
-.t-light .rsec{background:#f5f5f0}
-.t-light .rsec.alt{background:#ebebE6}
-.t-light .r-foot{background:#0A0A0A}
-.t-light .r-foot-text{color:rgba(212,255,0,.65)}
-.t-light .r-foot-h{color:rgba(212,255,0,.5)}
-.t-light .r-foot-links a{color:rgba(212,255,0,.65)}
-.t-light .r-foot-back{color:rgba(212,255,0,.6)}
-.t-light .r-foot-copy{color:rgba(212,255,0,.4)}
-.t-light .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
-.t-light .rg-bg{color:rgba(0,0,0,.12)!important;background:rgba(0,0,0,.08)!important}
-.t-light .rg-ov{background:linear-gradient(to top,rgba(0,0,0,.92),transparent)}
-.t-light .rh-sub{color:rgba(0,0,0,.6)}
-.t-light .rslbl{color:rgba(0,0,0,.55)}
-.t-light .rslbl::before{background:rgba(0,0,0,.4)}
-.t-light .rsp{color:rgba(0,0,0,.65)}
-.t-light .rsh{color:#0A0A0A}
-.t-light .rsh .y{color:var(--blk)}
+/* ── LIGHT THEME ── */
+.t-light .rh-bg{background:#f5f5f0}
+.t-light .rh-grid{background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px)}
+.t-light .rh-glow{opacity:0}
+.t-light .rh-year{color:rgba(0,0,0,.5)}
 .t-light .rh-title{color:#0A0A0A}
 .t-light .rh-tagline{color:#0A0A0A}
-.t-light .rh-year{color:rgba(0,0,0,.5)}
+.t-light .rh-sub{color:rgba(0,0,0,.6)}
+.t-light .rslbl{color:rgba(0,0,0,.6)}
+.t-light .rslbl::before{background:rgba(0,0,0,.5)}
+.t-light .rsh{color:#0A0A0A}
+.t-light .rsh .y{color:#0A0A0A}
+.t-light .rsp{color:rgba(0,0,0,.6)}
 .t-light .aw-name{color:#0A0A0A}
 .t-light .aw-desc{color:rgba(0,0,0,.6)}
 .t-light .aw-num{color:rgba(0,0,0,.06)}
 .t-light .hw-title{color:#0A0A0A}
 .t-light .hw-desc{color:rgba(0,0,0,.6)}
-.t-light .hw-num{color:rgba(0,0,0,.25)}
-.t-light .aw-card::after{background:#0A0A0A}
-.t-light .rg-tag{color:var(--y)}
-.t-light .rg-name{color:#fff}
-.t-light #rasa-scroll-ind{background:transparent}
-.t-light #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
-.t-light .scroll-mouse{border-color:rgba(0,0,0,.3)}
-.t-light .scroll-dot{background:#0A0A0A}
+.t-light .hw-num{color:rgba(0,0,0,.25);opacity:1}
 .t-light .cw-lbl{color:rgba(0,0,0,.5)}
 .t-light .cw-tag{color:rgba(0,0,0,.6)}
+.t-light .rsec{background:#f5f5f0}
+.t-light .rsec.alt{background:#eaeae5}
+.t-light .r-stats{background:#0A0A0A}
+.t-light .r-stat-n{color:var(--y)}
+.t-light .r-stat-l{color:rgba(212,255,0,.6)}
+.t-light .r-vote{background:#0A0A0A}
+.t-light .vote-title{color:var(--y)}
+.t-light .vote-sub{color:rgba(212,255,0,.65)}
+.t-light .btn-dk{background:var(--y);color:#0A0A0A}
+.t-light .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.4)}
+.t-light .r-foot{background:#0A0A0A}
+.t-light .r-foot-text{color:rgba(212,255,0,.65)}
+.t-light .r-foot-h{color:rgba(212,255,0,.5)}
+.t-light .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-light .r-foot-back{color:rgba(212,255,0,.6)}
+.t-light .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-light .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
+.t-light #rfTitle{color:var(--y)}
+.t-light .rg-bg{color:rgba(0,0,0,.12)!important;background:rgba(0,0,0,.07)!important}
+.t-light .rg-item{background:rgba(0,0,0,.06)}
+.t-light .rg-line{background:#0A0A0A}
+.t-light .rg-tag{color:var(--y)}
+.t-light #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
 
-/* ── RASA DARK ── */
-.t-dark .vote-title{color:#0A0A0A}
-.t-dark .vote-sub{color:rgba(0,0,0,.6)}
-.t-dark .btn-dk{background:#0A0A0A;color:var(--y)}
+/* ── WHITE THEME on RASA page ──
+   When white theme selected, RASA page gets t-white class via JS */
+.t-white .rh-bg{background:#f8f8f8}
+.t-white .rh-grid{background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px);opacity:.5}
+.t-white .rh-glow{opacity:0}
+.t-white .rh-year{color:rgba(0,0,0,.45)}
+.t-white .rh-title{color:#0A0A0A}
+.t-white .rh-tagline{color:#0A0A0A}
+.t-white .rh-sub{color:rgba(0,0,0,.55)}
+.t-white .rslbl{color:rgba(0,0,0,.55)}
+.t-white .rslbl::before{background:rgba(0,0,0,.4)}
+.t-white .rsh{color:#0A0A0A}
+.t-white .rsh .y{color:#0A0A0A}
+.t-white .rsp{color:rgba(0,0,0,.6)}
+.t-white .aw-name{color:#0A0A0A}
+.t-white .aw-desc{color:rgba(0,0,0,.6)}
+.t-white .aw-num{color:rgba(0,0,0,.05)}
+.t-white .hw-title{color:#0A0A0A}
+.t-white .hw-desc{color:rgba(0,0,0,.6)}
+.t-white .hw-num{color:rgba(0,0,0,.2);opacity:1}
+.t-white .cw-lbl{color:rgba(0,0,0,.5)}
+.t-white .cw-tag{color:rgba(0,0,0,.55)}
+.t-white .rsec{background:#f8f8f8}
+.t-white .rsec.alt{background:#efefef}
+.t-white .r-stats{background:#0A0A0A}
+.t-white .r-stat-n{color:var(--y)}
+.t-white .r-stat-l{color:rgba(212,255,0,.6)}
+.t-white .r-vote{background:#0A0A0A}
+.t-white .vote-title{color:var(--y)}
+.t-white .vote-sub{color:rgba(212,255,0,.65)}
+.t-white .btn-dk{background:var(--y);color:#0A0A0A}
+.t-white .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.3)}
+.t-white .r-foot{background:#0A0A0A}
+.t-white .r-foot-text{color:rgba(212,255,0,.65)}
+.t-white .r-foot-h{color:rgba(212,255,0,.5)}
+.t-white .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-white .r-foot-back{color:rgba(212,255,0,.6)}
+.t-white .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-white .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
+.t-white #rfTitle{color:var(--y)}
+.t-white .rg-bg{color:rgba(0,0,0,.1)!important;background:rgba(0,0,0,.06)!important}
+.t-white .rg-item{background:rgba(0,0,0,.06)}
+.t-white .rg-line{background:#0A0A0A}
+.t-white .aw-card{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.07)}
+.t-white .aw-card:hover{background:rgba(0,0,0,.08)}
+.t-white .hw-step{background:rgba(0,0,0,.04)}
+.t-white #rasa-scroll-ind span{color:rgba(0,0,0,.45)}
+
+.rh-watermark{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55vw;opacity:.05;pointer-events:none;color:var(--y)}
+.t-yellow .rh-watermark,.t-light .rh-watermark,.t-white .rh-watermark{color:#0A0A0A;opacity:.06}
+
+/* ════════════════════════════════════════════════════════
+   MASTER VISIBILITY — ALL WHITE/LIGHT THEMES
+   Every text element that becomes invisible gets fixed here.
+   Slickland page uses .body-white
+   RASA page uses .t-white / .t-light / .t-yellow
+   ════════════════════════════════════════════════════════ */
+
+/* ── SLICKLAND: WHITE THEME — COMPLETE FIX ── */
+
+/* Section headings */
+.body-white .sh{color:#0A0A0A !important}
+.body-white .sh .y{color:#0A0A0A !important}
+.body-white .slbl{color:#0A0A0A}
+.body-white .slbl::before{background:#0A0A0A}
+.body-white .sp{color:rgba(0,0,0,.6) !important}
+
+/* Navigation */
+.body-white nav{background:rgba(248,248,248,.98) !important;border-bottom-color:rgba(0,0,0,.1) !important}
+.body-white .nav-wordmark{color:#0A0A0A !important}
+.body-white .nav-wordmark em{color:#0A0A0A}
+.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65) !important}
+.body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A !important;background:rgba(0,0,0,.06) !important}
+.body-white .drop{background:#e8e8e8;border-color:rgba(0,0,0,.12)}
+.body-white .drop a{color:rgba(0,0,0,.65) !important}
+.body-white .drop a:hover{color:#0A0A0A !important;background:rgba(0,0,0,.07)}
+.body-white .talk-btn{background:#0A0A0A !important;color:#D4FF00 !important}
+.body-white .live-pill{color:#FF3030;border-color:rgba(255,48,48,.3);background:rgba(255,48,48,.08)}
+
+/* Hero */
+.body-white .hero-h1,.body-white .hero-line1,.body-white .hero-line2{color:#0A0A0A !important}
+.body-white .hero-line1{color:#0A0A0A !important}
+.body-white .hero-line2{color:#0A0A0A !important}
+.body-white .hero-line3 .rasa-logo-mark svg{color:#0A0A0A !important}
+.body-white .hero-sub{color:rgba(0,0,0,.6) !important}
+.body-white .hero-bg{background:#f2f2f2}
+.body-white .hero-grid{background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px)}
+.body-white .hero-radial{background:radial-gradient(circle,rgba(0,0,0,.03) 0%,transparent 60%)}
+.body-white .hero-letters{opacity:.09}
+.body-white .hero-letters-svg{fill:#0A0A0A}
+.body-white .hs-num{color:#0A0A0A !important}
+.body-white .hs-lbl{color:rgba(0,0,0,.5)}
+.body-white .eyebrow{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.15)}
+.body-white .eyebrow span{color:#0A0A0A}
+.body-white .eyebrow-dot{background:#0A0A0A}
+.body-white .btn-primary{background:#0A0A0A !important;color:#D4FF00 !important}
+.body-white .btn-ghost{color:#0A0A0A !important;border-color:rgba(0,0,0,.2) !important}
+.body-white .btn-ghost:hover{border-color:#0A0A0A !important}
+
+/* Ticker/Scroll/Marquee */
+.body-white .ticker{background:#0A0A0A}
+.body-white .ticker-item{color:#D4FF00}
+.body-white .ticker-dot{background:#D4FF00}
+.body-white .scroll-strip{background:#ebebeb;border-color:rgba(0,0,0,.08)}
+.body-white .scroll-strip .ss-mouse{border:2px solid rgba(0,0,0,.25)!important}
+.body-white .ss-dot{background:#0A0A0A}
+.body-white .scroll-strip span{color:rgba(0,0,0,.45)!important}
+.body-white .marq{background:#0A0A0A}
+.body-white .marq-item{color:#D4FF00}
+.body-white .marq-sep{background:#D4FF00}
+
+/* Scores bar */
+.body-white .scores{background:#e0e0e0;border-color:rgba(0,0,0,.07)}
+.body-white .sc{border-right-color:rgba(0,0,0,.07)}
+.body-white .sc-sport{color:#0A0A0A}
+.body-white .sc-score{color:#0A0A0A}
+.body-white .sc-team{color:rgba(0,0,0,.7) !important}
+
+/* News section */
+.body-white .news-sec{background:#ececec}
+.body-white .nc{background:#e0e0e0}
+.body-white .nc-title{color:#0A0A0A !important}
+.body-white .nc-date{color:rgba(0,0,0,.45) !important}
+.body-white .nc-tag{background:#0A0A0A;color:#D4FF00}
+.body-white .nc-arr{background:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .nc:hover .nc-arr{background:#0A0A0A;color:#D4FF00}
+.body-white .ntab{color:rgba(0,0,0,.45) !important}
+.body-white .ntab.on,.body-white .ntab:hover{color:#0A0A0A !important;border-bottom-color:#0A0A0A}
+
+/* About section */
+.body-white .about-sec{background:#f2f2f2}
+.body-white .float-tag2{background:#0A0A0A}
+.body-white .ft2-text{color:#D4FF00}
+.body-white .float-tag{background:#e0e0e0;border-color:rgba(0,0,0,.15)}
+.body-white .ft-num{color:#0A0A0A}
+.body-white .ft-lbl{color:rgba(0,0,0,.45)}
+.body-white .pill{background:rgba(0,0,0,.07);border-color:rgba(0,0,0,.14);color:rgba(0,0,0,.65)}
+
+/* Services */
+.body-white .sv-sec{background:#ececec}
+.body-white .sv{background:#e0e0e0}
+.body-white .sv:hover{background:#d8d8d8}
+.body-white .sv-name{color:#0A0A0A !important}
+.body-white .sv-desc{color:rgba(0,0,0,.6) !important}
+.body-white .sv-link{color:#0A0A0A !important}
+.body-white .sv-icon{background:#0A0A0A}
+.body-white .sv-num{color:rgba(0,0,0,.06)}
+.body-white .sv::after{background:#0A0A0A}
+
+/* Portfolio */
+.body-white .port-sec{background:#ececec}
+.body-white .po{background:#e0e0e0}
+.body-white .po-name{color:#ffffff}
+.body-white .po-tag{color:#D4FF00}
+.body-white .po-line{background:#0A0A0A}
+.body-white .pf.on,.body-white .pf:hover{background:#0A0A0A;color:#D4FF00;border-color:#0A0A0A}
+
+/* Ingenzi */
+.body-white .ing-sec{background:linear-gradient(135deg,#f2f2f2 0%,#e8ede8 100%)}
+.body-white .ist{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1)}
+.body-white .ist:hover{background:rgba(0,0,0,.09);border-color:rgba(0,0,0,.2)}
+.body-white .ist-num{color:#0A0A0A !important}
+.body-white .ist-lbl{color:rgba(0,0,0,.55) !important}
+
+/* Partners */
+.body-white .partners-sec{background:#f2f2f2}
+.body-white .p-lbl{color:rgba(0,0,0,.45)}
+.body-white .pchip{background:#e0e0e0;border-color:rgba(0,0,0,.08);color:rgba(0,0,0,.5) !important}
+.body-white .pchip:hover{color:#0A0A0A !important;border-color:rgba(0,0,0,.3)}
+
+/* Testimonials */
+.body-white .testi-sec{background:#ececec}
+.body-white .tq{background:#e0e0e0;border-color:rgba(0,0,0,.08)}
+.body-white .tq:hover{border-color:rgba(0,0,0,.25)}
+.body-white .tq-stars{color:#0A0A0A}
+.body-white .tq-text{color:rgba(0,0,0,.65) !important}
+.body-white .tq-name{color:#0A0A0A !important}
+.body-white .tq-role{color:rgba(0,0,0,.45)}
+.body-white .tq-av{background:#0A0A0A;color:#D4FF00}
+.body-white .testi-wrap::before{background:linear-gradient(to right,#ececec,transparent)}
+.body-white .testi-wrap::after{background:linear-gradient(to left,#ececec,transparent)}
+
+/* Booking/Forms */
+.body-white .bk-sec{background:#e8e8e8}
+.body-white .bk-card{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1)}
+.body-white .bk-card:hover{background:rgba(0,0,0,.09)}
+.body-white .bk-card-title{color:#0A0A0A !important}
+.body-white .bk-card-body{color:rgba(0,0,0,.6) !important}
+.body-white .bk-form{background:#e0e0e0;border-color:rgba(0,0,0,.08)}
+.body-white .form-ttl{color:#0A0A0A !important}
+.body-white .fg label{color:rgba(0,0,0,.5)}
+.body-white .fg input,.body-white .fg select,.body-white .fg textarea{background:#d8d8d8;border-color:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .fg input::placeholder,.body-white .fg textarea::placeholder{color:rgba(0,0,0,.35)}
+.body-white .fg input:focus,.body-white .fg select:focus,.body-white .fg textarea:focus{border-color:#0A0A0A}
+.body-white .fcheck span{color:rgba(0,0,0,.65)}
+.body-white .fcheck input{accent-color:#0A0A0A}
+
+/* Careers */
+.body-white .careers-sec{background:#f2f2f2}
+.body-white .role-row{background:#e8e8e8}
+.body-white .role-row:hover{background:#e0e0e0}
+.body-white .rname{color:#0A0A0A !important}
+.body-white .rbadge{background:rgba(0,0,0,.07);color:#0A0A0A}
+.body-white .rmeta{color:rgba(0,0,0,.45) !important}
+.body-white .rarr{background:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .role-row:hover .rarr{background:#0A0A0A;color:#D4FF00}
+
+/* Contact */
+.body-white .contact-sec{background:#ececec}
+.body-white .ct-lbl{color:rgba(0,0,0,.45)}
+.body-white .ct-val{color:#0A0A0A !important}
+.body-white .ct-val a{color:#0A0A0A !important}
+.body-white .tm{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.1)}
+.body-white .tm:hover{border-color:rgba(0,0,0,.22)}
+.body-white .tm-av{background:#0A0A0A;color:#D4FF00}
+.body-white .tm-name{color:#0A0A0A !important}
+.body-white .tm-role{color:rgba(0,0,0,.45)}
+.body-white .ct-form{background:#e0e0e0;border-color:rgba(0,0,0,.08)}
+
+/* Footer */
+.body-white footer{background:#f2f2f2;border-top-color:rgba(0,0,0,.07)}
+.body-white .ft-col-h{color:#0A0A0A !important}
+.body-white .ft-col ul a{color:rgba(0,0,0,.55)}
+.body-white .ft-col ul a:hover{color:#0A0A0A}
+.body-white .ft-about-text{color:rgba(0,0,0,.55) !important}
+.body-white .ft-copy{color:rgba(0,0,0,.4)}
+.body-white .ft-copy em{color:#0A0A0A}
+.body-white .soc{background:rgba(0,0,0,.08);color:rgba(0,0,0,.5)}
+.body-white .soc:hover{background:#0A0A0A !important;color:#D4FF00 !important}
+
+/* Sport bar */
+.body-white .sport-bar{background:#e0e0e0;border-color:rgba(0,0,0,.08)}
+.body-white .sptab{color:rgba(0,0,0,.45) !important}
+.body-white .sptab.on,.body-white .sptab:hover{color:#0A0A0A !important;border-bottom-color:#0A0A0A}
+
+/* Theme switcher on white */
+.body-white #themeSw{background:rgba(0,0,0,.85)}
+.body-white #themeSw span{color:rgba(255,255,255,.5)}
+
+/* ── RASA PAGES: yellow/light/white themes — COMPLETE TEXT FIX ── */
+
+/* These handle all RASA-specific white text that needs to go dark */
+.t-yellow .aw-name,.t-light .aw-name,.t-white .aw-name{color:#0A0A0A !important}
+.t-yellow .aw-desc,.t-light .aw-desc,.t-white .aw-desc{color:rgba(0,0,0,.65) !important}
+.t-yellow .aw-ico,.t-light .aw-ico,.t-white .aw-ico{filter:none}
+.t-yellow .hw-title,.t-light .hw-title,.t-white .hw-title{color:#0A0A0A !important}
+.t-yellow .hw-desc,.t-light .hw-desc,.t-white .hw-desc{color:rgba(0,0,0,.65) !important}
+.t-yellow .hw-num,.t-light .hw-num,.t-white .hw-num{color:rgba(0,0,0,.28) !important;opacity:1}
+.t-yellow .cw-lbl,.t-light .cw-lbl,.t-white .cw-lbl{color:rgba(0,0,0,.5) !important}
+.t-yellow .cw-tag,.t-light .cw-tag,.t-white .cw-tag{color:rgba(0,0,0,.6) !important}
+.t-yellow .rg-name,.t-light .rg-name,.t-white .rg-name{color:#ffffff}
+.t-yellow .rg-meta,.t-light .rg-meta,.t-white .rg-meta{color:rgba(255,255,255,.55)}
+.t-yellow .rh-title,.t-light .rh-title,.t-white .rh-title{color:#0A0A0A !important}
+.t-yellow .rh-sub,.t-light .rh-sub,.t-white .rh-sub{color:rgba(0,0,0,.65) !important}
+.t-yellow .rsh,.t-light .rsh,.t-white .rsh{color:#0A0A0A !important}
+.t-yellow .rsh .y,.t-light .rsh .y,.t-white .rsh .y{color:#0A0A0A !important}
+.t-yellow .rsp,.t-light .rsp,.t-white .rsp{color:rgba(0,0,0,.65) !important}
+.t-yellow .rslbl,.t-light .rslbl,.t-white .rslbl{color:rgba(0,0,0,.6) !important}
+.t-yellow .rslbl::before,.t-light .rslbl::before,.t-white .rslbl::before{background:rgba(0,0,0,.5)}
+
+/* RASA nav on yellow/light/white themes */
+.t-yellow .rh-year{color:rgba(0,0,0,.55) !important}
+.t-light .rh-year,.t-white .rh-year{color:rgba(0,0,0,.5) !important}
+.t-yellow .rh-tagline{color:#0A0A0A !important}
+.t-light .rh-tagline,.t-white .rh-tagline{color:#0A0A0A !important}
+
+/* RASA aw-card and hw-step backgrounds */
+.t-white .aw-card{background:rgba(0,0,0,.05) !important;border:1px solid rgba(0,0,0,.08)}
+.t-white .hw-step{background:rgba(0,0,0,.05) !important}
+.t-white .aw-card::after{background:#0A0A0A}
+
+/* Vote section on dark RASA theme */
+.t-dark .vote-title{color:#0A0A0A !important}
+.t-dark .vote-sub{color:rgba(0,0,0,.65) !important}
+.t-dark .btn-dk{background:#0A0A0A;color:#D4FF00}
 .t-dark .btn-dk-out{color:#0A0A0A;border-color:rgba(0,0,0,.25)}
-.t-dark .r-vote::before{background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px)}
 
-.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65)}
-.body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A;background:rgba(0,0,0,.06)}
-.body-white .drop{background:#e8e8e8;border-color:rgba(0,0,0,.1)}
-.body-white .drop a{color:rgba(0,0,0,.65)}
-.body-white .drop a:hover{background:rgba(0,0,0,.06);color:#0A0A0A}
-.body-white .nav-wordmark{color:#0A0A0A}
-.body-white .chev{color:rgba(0,0,0,.4)}
-.body-white .live-pill{color:var(--red);border-color:rgba(255,48,48,.3);background:rgba(255,48,48,.06)}
+/* ── DONATION SECTION — WHITE THEME ── */
+.body-white #donation{background:#e8e8e8 !important}
+.body-white .form-ok{background:rgba(0,0,0,.07);border-color:rgba(0,0,0,.2);color:#0A0A0A}
+.body-white .y{color:#0A0A0A !important}
+.body-white #donOk,.body-white #bkOk,.body-white #ctOk{background:rgba(0,0,0,.07);border-color:rgba(0,0,0,.2);color:#0A0A0A}
+
+/* ══════════════════════════════════════════════════════
+   RASA PAGE — CLEAN MASTER CSS (rebuilt from scratch)
+   Dark theme is default. Overrides per theme below.
+   ══════════════════════════════════════════════════════ */
+
+/* Hero */
+.rh{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:152px}
+.rh-content{position:relative;z-index:2;text-align:center;padding:0 40px;max-width:960px}
+.rh-logo{display:flex;justify-content:center;margin-bottom:40px;animation:logoIn 1s .2s both}
+@keyframes logoIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.rh-bg{position:absolute;inset:0;transition:background .5s}
+.rh-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,255,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,255,0,.025) 1px,transparent 1px);background-size:72px 72px;animation:gridDrift 30s linear infinite;transition:opacity .5s}
+.rh-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80vw;height:80vw;background:radial-gradient(circle,rgba(212,255,0,.09) 0%,transparent 60%);animation:gP 6s ease-in-out infinite alternate;transition:opacity .5s}
+@keyframes gP{0%{transform:translate(-50%,-50%) scale(1)}100%{transform:translate(-50%,-50%) scale(1.15)}}
+.rh-watermark{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55vw;opacity:.05;pointer-events:none;color:var(--y);transition:color .5s,opacity .5s}
+.rh-year{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.4em;text-transform:uppercase;color:var(--y);margin-bottom:20px;display:block;animation:riseUp .8s .6s both}
+.rh-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-.01em;line-height:.95;margin-bottom:20px;color:#ffffff;animation:riseUp .8s .8s both}
+.rh-tagline{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(22px,3.5vw,42px);text-transform:uppercase;color:var(--y);letter-spacing:.05em;margin-bottom:28px;animation:riseUp .8s 1s both}
+.rh-sub{font-size:17px;font-weight:300;color:rgba(255,255,255,.55);line-height:1.7;max-width:620px;margin:0 auto 48px;animation:riseUp .8s 1.1s both}
+.rh-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;animation:riseUp .8s 1.2s both}
+.rh-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;animation:riseUp .8s 1.4s both}
+.scroll-mouse{width:24px;height:38px;border:2px solid rgba(212,255,0,.4);border-radius:12px;display:flex;justify-content:center;padding-top:6px;transition:border-color .5s}
+.scroll-dot{width:4px;height:8px;background:var(--y);border-radius:2px;animation:scrollDot 1.6s ease-in-out infinite;transition:background .5s}
+@keyframes scrollDot{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(10px);opacity:.3}}
+
+/* Stats bar */
+.r-stats{background:var(--y);padding:0;transition:background .5s}
+.r-stats-row{display:flex;align-items:stretch;max-width:1320px;margin:0 auto}
+.r-stat{flex:1;padding:28px 32px;border-right:1px solid rgba(0,0,0,.12);text-align:center;transition:border-color .5s}
+.r-stat:last-child{border-right:none}
+.r-stat-n{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;color:var(--blk);line-height:1}
+.r-stat-l{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,0,0,.55);margin-top:4px}
+
+/* Sections */
+.rsec{padding:100px 48px;transition:background .5s,color .5s}
+.rsec.alt{padding:100px 48px;transition:background .5s,color .5s}
+
+/* Section labels & headings */
+.rslbl{display:flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--y);margin-bottom:16px}
+.rslbl::before{content:'';width:22px;height:2px;background:var(--y);flex-shrink:0}
+.rsh{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(44px,5.5vw,80px);text-transform:uppercase;line-height:.9;letter-spacing:-.02em;margin-bottom:24px;color:#ffffff}
+.rsh .y{color:var(--y)}
+.rsp{font-size:17px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.72;max-width:520px}
+
+/* Award cards */
+.aw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:0}
+.aw-card{background:var(--d2);padding:44px 36px;position:relative;overflow:hidden;cursor:none;transition:background .3s,transform .2s;border:1px solid transparent}
+.aw-card:hover{background:var(--d3);transform:translateY(-2px)}
+.aw-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:3px;background:var(--y);transition:width .45s}
+.aw-card:hover::after{width:100%}
+.aw-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:64px;color:rgba(212,255,0,.08);line-height:1;position:absolute;top:16px;right:20px}
+.aw-ico{font-size:36px;margin-bottom:20px}
+.aw-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;line-height:1.1;color:#ffffff}
+.aw-desc{font-size:14px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.45)}
+
+/* How it works */
+.hw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:0}
+.hw-step{background:var(--d2);padding:44px 32px;position:relative;cursor:none;transition:background .3s}
+.hw-step:hover{background:var(--d3)}
+.hw-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:56px;line-height:1;margin-bottom:16px;color:var(--y);opacity:.7}
+.hw-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;text-transform:uppercase;margin-bottom:12px;color:#ffffff}
+.hw-desc{font-size:14px;font-weight:300;line-height:1.65;color:rgba(255,255,255,.45)}
+
+/* Vote CTA */
+.r-vote{background:var(--y);position:relative;overflow:hidden;transition:background .5s}
+.vote-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(56px,8vw,110px);text-transform:uppercase;line-height:.88;letter-spacing:-.02em;margin-bottom:20px;color:var(--blk)}
+.vote-sub{font-size:18px;font-weight:300;line-height:1.7;margin-bottom:44px;color:rgba(0,0,0,.6)}
+.vote-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-dk{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:transform .25s,box-shadow .25s;border:none;background:var(--blk);color:var(--y)}
+.btn-dk:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(0,0,0,.4)}
+.btn-dk-out{display:inline-flex;align-items:center;gap:10px;padding:18px 44px;border-radius:5px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:all .25s;color:var(--blk);border:2px solid rgba(0,0,0,.2);background:none}
+.btn-dk-out:hover{background:rgba(0,0,0,.08)}
+
+/* Gallery */
+.rg-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:3px;margin-top:0}
+.rg-item{position:relative;overflow:hidden;cursor:none;background:var(--d2)}
+.rg-item.tall{grid-row:span 2}
+.rg-bg{width:100%;height:100%;min-height:260px;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:7vw;color:rgba(212,255,0,.05);text-transform:uppercase;transition:transform .6s;padding:20px;text-align:center;line-height:1}
+.rg-item:hover .rg-bg{transform:scale(1.06)}
+.rg-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,7,.96) 0%,transparent 55%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+.rg-item:hover .rg-ov{opacity:1}
+.rg-line{position:absolute;top:0;left:0;right:0;height:3px;background:var(--y);transform:scaleX(0);transform-origin:left;transition:transform .42s}
+.rg-item:hover .rg-line{transform:scaleX(1)}
+.rg-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--y);font-weight:700;margin-bottom:6px}
+.rg-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;text-transform:uppercase;color:#ffffff}
+.rg-meta{font-size:12px;color:rgba(255,255,255,.42);margin-top:4px}
+
+/* Colorway swatches */
+.cw-row{display:flex;gap:20px;margin-top:8px;flex-wrap:wrap}
+.cw{display:flex;flex-direction:column;align-items:center;gap:10px;cursor:none}
+.cw-box{width:100px;height:100px;border-radius:14px;display:flex;align-items:center;justify-content:center;transition:transform .2s,box-shadow .2s;border:2px solid transparent}
+.cw:hover .cw-box{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.5)}
+.cw.on .cw-box{border-color:rgba(255,255,255,.5)}
+.cw-lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,.4)}
+.cw-tag{font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--y)}
+
+/* RASA Footer */
+.r-foot{background:var(--y);padding:60px 48px;transition:background .5s}
+.r-foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:64px;max-width:1320px;margin:0 auto}
+.r-foot-text{font-size:14px;font-weight:300;line-height:1.7;max-width:280px;margin-top:12px;color:rgba(0,0,0,.6)}
+.r-foot-h{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:16px;color:rgba(0,0,0,.45)}
+.r-foot-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.r-foot-links a{font-size:14px;text-decoration:none;transition:color .2s;cursor:none;color:rgba(0,0,0,.65)}
+.r-foot-links a:hover{color:var(--blk)!important}
+.r-foot-bar{border-top:1px solid rgba(0,0,0,.12);margin-top:48px;padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;max-width:1320px;margin-left:auto;margin-right:auto}
+.r-foot-copy{font-size:12px;color:rgba(0,0,0,.4)}
+.r-foot-back{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:none;transition:color .2s;color:rgba(0,0,0,.55)}
+.r-foot-back:hover{color:var(--blk)!important}
+.r-socials{display:flex;gap:10px;margin-top:20px}
+.r-soc{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;text-decoration:none;transition:all .2s;cursor:none;background:rgba(0,0,0,.1);color:rgba(0,0,0,.55)}
+.r-soc:hover{background:var(--blk)!important;color:var(--y)!important}
+
+/* ── THEME OVERRIDES ── */
+
+/* Dark (default) */
+.t-dark .rh-bg{background:var(--blk)}
+.t-dark .rsec{background:var(--blk)}
+.t-dark .rsec.alt{background:var(--d1)}
+.t-dark .r-stats{background:var(--y)}
+.t-dark .r-stat-n{color:var(--blk)}
+.t-dark .r-stat-l{color:rgba(0,0,0,.55)}
+.t-dark .r-stat{border-right-color:rgba(0,0,0,.12)}
+.t-dark .r-vote{background:var(--y)}
+.t-dark .vote-title{color:var(--blk)}
+.t-dark .vote-sub{color:rgba(0,0,0,.6)}
+.t-dark .btn-dk{background:var(--blk);color:var(--y)}
+.t-dark .btn-dk-out{color:var(--blk);border-color:rgba(0,0,0,.2)}
+.t-dark .r-foot{background:var(--y)}
+.t-dark #rfTitle{color:rgba(0,0,0,.85)}
+
+/* Yellow */
+.t-yellow .rh-bg{background:#D4FF00}
+.t-yellow .rh-grid{background-image:linear-gradient(rgba(0,0,0,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.06) 1px,transparent 1px)}
+.t-yellow .rh-glow{opacity:0}
+.t-yellow .rh-watermark{color:#0A0A0A;opacity:.06}
+.t-yellow .scroll-mouse{border-color:rgba(0,0,0,.3)}
+.t-yellow .scroll-dot{background:#0A0A0A}
+.t-yellow .rsec{background:#D4FF00}
+.t-yellow .rsec.alt{background:rgba(0,0,0,.07)}
+.t-yellow .rsec.alt .rsh{color:#D4FF00}
+.t-yellow .rsec.alt .rsp{color:rgba(212,255,0,.75)}
+.t-yellow .rsec.alt .rslbl{color:rgba(212,255,0,.6)}
+.t-yellow .rsec.alt .rslbl::before{background:rgba(212,255,0,.5)}
+.t-yellow .aw-card{background:rgba(0,0,0,.1);border-color:rgba(0,0,0,.07)}
+.t-yellow .aw-card:hover{background:rgba(0,0,0,.16)}
+.t-yellow .aw-card::after{background:#0A0A0A}
+.t-yellow .aw-num{color:rgba(0,0,0,.06)}
+.t-yellow .hw-step{background:rgba(0,0,0,.09)}
+.t-yellow .r-stats{background:#0A0A0A}
+.t-yellow .r-stat-n{color:var(--y)}
+.t-yellow .r-stat-l{color:rgba(212,255,0,.55)}
+.t-yellow .r-stat{border-right-color:rgba(212,255,0,.1)}
+.t-yellow .r-vote{background:#0A0A0A}
+.t-yellow .vote-title{color:var(--y)}
+.t-yellow .vote-sub{color:rgba(212,255,0,.65)}
+.t-yellow .btn-dk{background:var(--y);color:#0A0A0A}
+.t-yellow .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.4)}
+.t-yellow .rg-item{background:rgba(0,0,0,.12)}
+.t-yellow .rg-bg{color:rgba(0,0,0,.14)!important;background:rgba(0,0,0,.08)!important}
+.t-yellow .rg-line{background:#0A0A0A}
+.t-yellow .cw.on .cw-box{border-color:rgba(0,0,0,.5)}
+.t-yellow .r-foot{background:#0A0A0A}
+.t-yellow .r-foot-text{color:rgba(212,255,0,.65)}
+.t-yellow .r-foot-h{color:rgba(212,255,0,.5)}
+.t-yellow .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-yellow .r-foot-back{color:rgba(212,255,0,.6)}
+.t-yellow .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-yellow .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
+.t-yellow #rfTitle{color:var(--y)}
+.t-yellow .r-soc{background:rgba(212,255,0,.12);color:rgba(212,255,0,.7)}
+.t-yellow #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
+
+/* Light */
+.t-light .rh-bg{background:#f5f5f0}
+.t-light .rh-grid{background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px)}
+.t-light .rh-glow{opacity:0}
+.t-light .rh-watermark{color:#0A0A0A;opacity:.06}
+.t-light .scroll-mouse{border-color:rgba(0,0,0,.3)}
+.t-light .scroll-dot{background:#0A0A0A}
+.t-light .rsec{background:#f5f5f0}
+.t-light .rsec.alt{background:#eaeae5}
+.t-light .aw-card{background:rgba(0,0,0,.06);border-color:rgba(0,0,0,.06)}
+.t-light .aw-card:hover{background:rgba(0,0,0,.11)}
+.t-light .aw-card::after{background:#0A0A0A}
+.t-light .aw-num{color:rgba(0,0,0,.05)}
+.t-light .hw-step{background:rgba(0,0,0,.06)}
+.t-light .r-stats{background:#0A0A0A}
+.t-light .r-stat-n{color:var(--y)}
+.t-light .r-stat-l{color:rgba(212,255,0,.55)}
+.t-light .r-stat{border-right-color:rgba(212,255,0,.1)}
+.t-light .r-vote{background:#0A0A0A}
+.t-light .vote-title{color:var(--y)}
+.t-light .vote-sub{color:rgba(212,255,0,.65)}
+.t-light .btn-dk{background:var(--y);color:#0A0A0A}
+.t-light .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.4)}
+.t-light .rg-item{background:rgba(0,0,0,.08)}
+.t-light .rg-bg{color:rgba(0,0,0,.12)!important;background:rgba(0,0,0,.06)!important}
+.t-light .rg-line{background:#0A0A0A}
+.t-light .cw.on .cw-box{border-color:rgba(0,0,0,.5)}
+.t-light .r-foot{background:#0A0A0A}
+.t-light .r-foot-text{color:rgba(212,255,0,.65)}
+.t-light .r-foot-h{color:rgba(212,255,0,.5)}
+.t-light .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-light .r-foot-back{color:rgba(212,255,0,.6)}
+.t-light .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-light .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
+.t-light #rfTitle{color:var(--y)}
+.t-light .r-soc{background:rgba(0,0,0,.08);color:rgba(0,0,0,.55)}
+.t-light #rasa-scroll-ind span{color:rgba(0,0,0,.5)}
+
+/* White */
+.t-white .rh-bg{background:#f8f8f8}
+.t-white .rh-grid{background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);opacity:.5}
+.t-white .rh-glow{opacity:0}
+.t-white .rh-watermark{color:#0A0A0A;opacity:.06}
+.t-white .scroll-mouse{border-color:rgba(0,0,0,.25)}
+.t-white .scroll-dot{background:#0A0A0A}
+.t-white .rsec{background:#f8f8f8}
+.t-white .rsec.alt{background:#efefef}
+.t-white .aw-card{background:rgba(0,0,0,.05);border-color:rgba(0,0,0,.07)}
+.t-white .aw-card:hover{background:rgba(0,0,0,.09)}
+.t-white .aw-card::after{background:#0A0A0A}
+.t-white .aw-num{color:rgba(0,0,0,.05)}
+.t-white .hw-step{background:rgba(0,0,0,.05)}
+.t-white .r-stats{background:#0A0A0A}
+.t-white .r-stat-n{color:var(--y)}
+.t-white .r-stat-l{color:rgba(212,255,0,.55)}
+.t-white .r-stat{border-right-color:rgba(212,255,0,.1)}
+.t-white .r-vote{background:#0A0A0A}
+.t-white .vote-title{color:var(--y)}
+.t-white .vote-sub{color:rgba(212,255,0,.65)}
+.t-white .btn-dk{background:var(--y);color:#0A0A0A}
+.t-white .btn-dk-out{color:var(--y);border-color:rgba(212,255,0,.4)}
+.t-white .rg-item{background:rgba(0,0,0,.06)}
+.t-white .rg-bg{color:rgba(0,0,0,.1)!important;background:rgba(0,0,0,.05)!important}
+.t-white .rg-line{background:#0A0A0A}
+.t-white .cw.on .cw-box{border-color:rgba(0,0,0,.5)}
+.t-white .r-foot{background:#0A0A0A}
+.t-white .r-foot-text{color:rgba(212,255,0,.65)}
+.t-white .r-foot-h{color:rgba(212,255,0,.5)}
+.t-white .r-foot-links a{color:rgba(212,255,0,.7)}
+.t-white .r-foot-back{color:rgba(212,255,0,.6)}
+.t-white .r-foot-copy{color:rgba(212,255,0,.4)}
+.t-white .r-foot-bar{border-top-color:rgba(212,255,0,.15)}
+.t-white #rfTitle{color:var(--y)}
+.t-white .r-soc{background:rgba(0,0,0,.08);color:rgba(0,0,0,.55)}
+.t-white #rasa-scroll-ind span{color:rgba(0,0,0,.45)}
+
+/* Responsive */
+@media(max-width:1100px){
+  .aw-grid,.hw-grid{grid-template-columns:repeat(2,1fr)}
+  .rg-grid{grid-template-columns:repeat(2,1fr)}
+  .rg-item.tall{grid-row:span 1}
+  .r-foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .r-stats-row{flex-wrap:wrap}
+  .r-stat{flex:1 1 50%;border-right:none;border-bottom:1px solid rgba(0,0,0,.1)}
+}
+@media(max-width:768px){
+  .rsec,.rsec.alt{padding:72px 20px}
+  .aw-grid,.hw-grid{grid-template-columns:1fr}
+  .rg-grid{grid-template-columns:1fr}
+  .r-foot-grid{grid-template-columns:1fr}
+  .rh-content{padding:0 20px}
+  .cw-row{gap:14px}
+  .cw-box{width:72px;height:72px}
+}
+
+.rh-scroll span{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600}
+
+/* ── SCROLL STRIP BASE (after all overrides) ── */
+.scroll-strip .ss-mouse{width:22px;height:34px;border:2px solid rgba(212,255,0,.5)!important;border-radius:11px;display:flex;justify-content:center;padding-top:5px;flex-shrink:0}
+.scroll-strip .ss-line ~ span,.scroll-strip span{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.5)!important;font-weight:600}
+.ss-line{flex:1;height:1px;background:linear-gradient(to right,rgba(212,255,0,.2),transparent)}
+.body-white .scroll-strip .ss-mouse{border:2px solid rgba(0,0,0,.25)!important}
+.body-white .scroll-strip span{color:rgba(0,0,0,.45)!important}
+.body-white .ss-line{background:linear-gradient(to right,rgba(0,0,0,.15),transparent)}
+
+.t-yellow .rasa-scroll-text,.t-light .rasa-scroll-text,.t-white .rasa-scroll-text{color:rgba(0,0,0,.5)}
+.t-dark .rasa-scroll-text{color:rgba(255,255,255,.5)}
 </style>
 </head>
 <body>
@@ -1176,12 +1869,12 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 </div><!-- /pg-home -->
 
 
-<!-- ════════════════════
-     RASA PAGE
-════════════════════ -->
+<!-- ════════════════════════════════════
+     RASA PAGE — ENHANCED DESIGN
+════════════════════════════════════ -->
 <div class="page rasa-page t-dark" id="pg-rasa">
 
-  <!-- Sport bar on RASA page -->
+  <!-- SPORT BAR (RASA only) -->
   <div class="sport-bar">
     <div class="sport-bar-inner">
       <button class="sptab on" onclick="setSp(this)">🏆 All Sports</button>
@@ -1198,61 +1891,60 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   <!-- RASA HERO -->
   <div class="rh" id="rasa-top">
     <div class="rh-bg"><div class="rh-grid"></div><div class="rh-glow"></div></div>
+    <!-- Watermark letters in hero bg -->
+    <div class="rh-watermark" aria-hidden="true">
+      <svg viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+        <path fill="currentColor" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="currentColor" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/>
+        <path fill="currentColor" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="currentColor" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/>
+      </svg>
+    </div>
     <div class="rh-content">
-      <!-- Giant RASA logo - dark version by default, updated by theme switcher -->
-      <div class="rh-logo">
-        <svg width="200" height="200" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="16"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
+      <div class="rh-logo rv">
+        <svg width="200" height="200" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="20"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
       </div>
-      <span class="rh-year">Rwanda · 2025 Edition</span>
-      <h1 class="rh-title">Rwanda Annual Sports Awards</h1>
-      <div class="rh-tagline">Celebrating Excellence, Inspiring Generations</div>
-      <p class="rh-sub">RASA is Rwanda's premier annual sports awards ceremony — a national movement celebrating outstanding athletes, coaches, teams, and contributors who shape Africa's sporting future.</p>
-      <div class="rh-btns">
-        <a href="#rasa-vote" class="btn-primary" onclick="document.getElementById('rasa-vote').scrollIntoView({behavior:'smooth'});return false">Cast Your Vote →</a>
-        <a href="#rasa-awards" class="btn-ghost" onclick="document.getElementById('rasa-awards').scrollIntoView({behavior:'smooth'});return false">Award Categories</a>
+      <span class="rh-year rv d1">Rwanda · 2025 Edition</span>
+      <h1 class="rh-title rv d2">Rwanda Annual Sports Awards</h1>
+      <div class="rh-tagline rv d2">Celebrating Excellence, Inspiring Generations</div>
+      <p class="rh-sub rv d3">RASA is Rwanda's premier annual sports awards ceremony — a national movement celebrating outstanding athletes, coaches, teams, and contributors who inspire the nation.</p>
+      <div class="rh-btns rv d3">
+        <a href="#" class="btn-primary" onclick="document.getElementById('rasa-vote').scrollIntoView({behavior:'smooth'});return false">Cast Your Vote →</a>
+        <a href="#" class="btn-ghost" onclick="document.getElementById('rasa-awards').scrollIntoView({behavior:'smooth'});return false">Award Categories</a>
       </div>
     </div>
   </div>
 
-  <!-- STATS -->
-  <div class="r-stats"><div class="r-stats-row">
-    <div class="r-stat"><div class="r-stat-n">3M+</div><div class="r-stat-l">Citizens Engaged</div></div>
-    <div class="r-stat"><div class="r-stat-n">50+</div><div class="r-stat-l">Global Partners</div></div>
-    <div class="r-stat"><div class="r-stat-n">20+</div><div class="r-stat-l">Award Categories</div></div>
-    <div class="r-stat"><div class="r-stat-n">10</div><div class="r-stat-l">Hall of Fame / Year</div></div>
-  </div></div>
-
-  <!-- SCROLL INDICATOR RASA -->
-  <div id="rasa-scroll-ind" style="display:flex;justify-content:center;align-items:center;gap:16px;padding:20px 48px;transition:background .5s">
-    <div style="width:28px;height:1px;background:var(--y);opacity:.5"></div>
-    <span style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gr)">Scroll to explore</span>
-    <div style="width:28px;height:1px;background:var(--y);opacity:.5"></div>
+  <!-- STATS BAR -->
+  <div class="r-stats">
+    <div class="r-stats-row">
+      <div class="r-stat"><div class="r-stat-n">3M+</div><div class="r-stat-l">Citizens Engaged</div></div>
+      <div class="r-stat"><div class="r-stat-n">50+</div><div class="r-stat-l">Global Partners</div></div>
+      <div class="r-stat"><div class="r-stat-n">20+</div><div class="r-stat-l">Award Categories</div></div>
+      <div class="r-stat"><div class="r-stat-n">10</div><div class="r-stat-l">Hall of Fame / Year</div></div>
+    </div>
   </div>
 
-  <!-- ABOUT + LOGO COLORWAYS -->
+
+
+  <!-- ABOUT + COLORWAYS -->
   <div class="rsec alt" id="rasa-about">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="rv">
-        <div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+        <div class="rv">
           <div class="rslbl">Logo Colorways</div>
           <h2 class="rsh">The RASA <span class="y">Identity</span></h2>
           <p class="rsp" style="margin-bottom:36px">Three official colorways from the RASA brand book. Click each to experience the full page theme.</p>
-          <!-- 3 clickable colorway swatches -->
           <div class="cw-row">
             <div class="cw on" id="cw-dark" onclick="setTheme('dark',document.querySelector('.tb-dark'));setCw('dark')">
-              <div <div class="cw-box" style="background:#111"><svg width="64" height="64" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="8"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
-              <div class="cw-lbl">Primary</div>
-              <div class="cw-tag">Dark bg</div>
+              <div class="cw-box" style="background:#0A0A0A"><svg width="64" height="64" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="8"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
+              <div class="cw-lbl">Primary</div><div class="cw-tag">Dark bg</div>
             </div>
             <div class="cw" id="cw-yellow" onclick="setTheme('yellow',document.querySelector('.tb-yellow'));setCw('yellow')">
-              <div <div class="cw-box" style="background:#D4FF00"><svg width="64" height="64" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#D4FF00" rx="8"/><path fill="#0A0A0A" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#0A0A0A" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#0A0A0A" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#0A0A0A" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
-              <div class="cw-lbl">Yellow bg</div>
-              <div class="cw-tag">Brand book p.7</div>
+              <div class="cw-box" style="background:#D4FF00"><svg width="64" height="64" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#D4FF00" rx="8"/><path fill="#0A0A0A" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#0A0A0A" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#0A0A0A" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#0A0A0A" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
+              <div class="cw-lbl">Yellow bg</div><div class="cw-tag">Brand book</div>
             </div>
             <div class="cw" id="cw-light" onclick="setTheme('light',document.querySelector('.tb-light'));setCw('light')">
-              <div <div class="cw-box" style="background:#f5f5f0"><svg width="64" height="64" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#f5f5f0" rx="8"/><path fill="#0A0A0A" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#0A0A0A" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#0A0A0A" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#0A0A0A" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
-              <div class="cw-lbl">Light bg</div>
-              <div class="cw-tag">Monochrome</div>
+              <div class="cw-box" style="background:#f5f5f0"><svg width="64" height="64" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#f5f5f0" rx="8"/><path fill="#0A0A0A" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#0A0A0A" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#0A0A0A" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#0A0A0A" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
+              <div class="cw-lbl">Light bg</div><div class="cw-tag">Monochrome</div>
             </div>
           </div>
         </div>
@@ -1260,27 +1952,37 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
           <div class="rslbl">About RASA</div>
           <h2 class="rsh">Rwanda's Premier<br><span class="y">Sports Movement</span></h2>
           <p class="rsp">RASA is an annual sports awarding ceremony recognising outstanding talent, fostering excellence, and encouraging athletes and stakeholders to perform at their best.</p>
-          <p class="rsp" style="margin-top:18px">This initiative unites all sectors — government, private sector, and non-profits — to create a thriving sports ecosystem in Rwanda. Organised by Slickland Ltd, a business created by former athletes.</p>
+          <p class="rsp" style="margin-top:18px">This initiative unites all sectors — government, private sector, and non-profits — to create a thriving sports ecosystem in Rwanda. Organised by Slickland Ltd, created by former athletes.</p>
           <a href="#" class="btn-primary" style="margin-top:28px;display:inline-flex" onclick="document.getElementById('rasa-vote').scrollIntoView({behavior:'smooth'});return false">Vote Now →</a>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- SCROLL TO EXPLORE -->
+  <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:60px 48px 60px;transition:background .5s;border-bottom:1px solid rgba(212,255,0,.08)">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span style="font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:600" class="rasa-scroll-text">Scroll to explore</span>
+  </div>
+
   <!-- AWARD CATEGORIES -->
   <div class="rsec" id="rasa-awards">
     <div class="wrap">
-      <div class="rv" style="text-align:center"><div class="rslbl" style="justify-content:center">RASA 2025</div><h2 class="rsh" style="text-align:center">Award <span class="y">Categories</span></h2></div>
+      <div class="rv" style="text-align:center;margin-bottom:56px">
+        <div class="rslbl" style="justify-content:center">RASA 2025</div>
+        <h2 class="rsh" style="text-align:center">Award <span class="y">Categories</span></h2>
+        <p class="rsp" style="text-align:center;max-width:560px;margin:0 auto">Celebrating excellence across every sport representing Rwanda on the national and international stage.</p>
+      </div>
       <div class="aw-grid">
-        <div class="aw-card rv"><div class="aw-num">01</div><div class="aw-ico">⚽</div><div class="aw-name">Best Football Player of the Year</div><p class="aw-desc">Outstanding skill, leadership and impact in the 2025 football season.</p></div>
+        <div class="aw-card rv"><div class="aw-num">01</div><div class="aw-ico">⚽</div><div class="aw-name">Best Football Player</div><p class="aw-desc">Outstanding skill, leadership and impact in the 2025 football season.</p></div>
         <div class="aw-card rv d1"><div class="aw-num">02</div><div class="aw-ico">🏀</div><div class="aw-name">Best Basketball Athlete</div><p class="aw-desc">Performance, sportsmanship and contribution to basketball in Rwanda.</p></div>
         <div class="aw-card rv d2"><div class="aw-num">03</div><div class="aw-ico">🏐</div><div class="aw-name">Best Volleyball Player</div><p class="aw-desc">Setting the standard for excellence on and off the court.</p></div>
         <div class="aw-card rv"><div class="aw-num">04</div><div class="aw-ico">🚴</div><div class="aw-name">Best Cyclist of the Year</div><p class="aw-desc">Celebrating the spirit and grit of Rwanda's world-class cycling tradition.</p></div>
         <div class="aw-card rv d1"><div class="aw-num">05</div><div class="aw-ico">🏃</div><div class="aw-name">Best Athletics Performer</div><p class="aw-desc">The most remarkable track and field results representing Rwanda.</p></div>
         <div class="aw-card rv d2"><div class="aw-num">06</div><div class="aw-ico">🥊</div><div class="aw-name">Best Combat Sports Athlete</div><p class="aw-desc">Excellence in boxing, wrestling, or taekwondo — Rwanda's warriors.</p></div>
-        <div class="aw-card rv"><div class="aw-num">07</div><div class="aw-ico">♿</div><div class="aw-name">Para-Sport Achievement Award</div><p class="aw-desc">Recognising para-athletes who inspire — in partnership with Sport on the Wheel.</p></div>
+        <div class="aw-card rv"><div class="aw-num">07</div><div class="aw-ico">♿</div><div class="aw-name">Para-Sport Achievement</div><p class="aw-desc">Recognising para-athletes who inspire — with Sport on the Wheel.</p></div>
         <div class="aw-card rv d1"><div class="aw-num">08</div><div class="aw-ico">👨‍🏫</div><div class="aw-name">Best Coach of the Year</div><p class="aw-desc">The coaching mind who shaped Rwanda's sporting talent in 2025.</p></div>
-        <div class="aw-card rv d2"><div class="aw-num">09</div><div class="aw-ico">🌟</div><div class="aw-name">Lifetime Achievement Award</div><p class="aw-desc">The highest honour — awarded to a legend who built Rwanda's sporting legacy.</p></div>
+        <div class="aw-card rv d2" style="border:1px solid rgba(212,255,0,.15)"><div class="aw-num">09</div><div class="aw-ico">🌟</div><div class="aw-name">Lifetime Achievement Award</div><p class="aw-desc">The highest honour — awarded to a legend who built Rwanda's sporting legacy.</p></div>
       </div>
     </div>
   </div>
@@ -1288,21 +1990,41 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   <!-- HOW IT WORKS -->
   <div class="rsec alt" id="rasa-how">
     <div class="wrap">
-      <div class="rv" style="text-align:center"><div class="rslbl" style="justify-content:center">The Process</div><h2 class="rsh" style="text-align:center">How <span class="y">RASA Works</span></h2></div>
+      <div class="rv" style="text-align:center;margin-bottom:56px">
+        <div class="rslbl" style="justify-content:center">The Process</div>
+        <h2 class="rsh" style="text-align:center">How <span class="y">RASA Works</span></h2>
+      </div>
       <div class="hw-grid">
-        <div class="hw-step rv"><div class="hw-num">01</div><div class="hw-title">Nominations Open</div><p class="hw-desc">Citizens and sports bodies nominate outstanding athletes across all categories via SMS and online.</p></div>
-        <div class="hw-step rv d1"><div class="hw-num">02</div><div class="hw-title">Public Voting</div><p class="hw-desc">Over 2 million Rwandans vote via SMS and online — making RASA truly democratic.</p></div>
-        <div class="hw-step rv d2"><div class="hw-num">03</div><div class="hw-title">Expert Panel Review</div><p class="hw-desc">Sports experts and legends review nominations to confirm the final shortlist.</p></div>
-        <div class="hw-step rv d3"><div class="hw-num">04</div><div class="hw-title">The RASA Gala</div><p class="hw-desc">Winners announced at a world-class awards gala with live performances and global media coverage.</p></div>
+        <div class="hw-step rv">
+          <div class="hw-num">01</div>
+          <div class="hw-title">Nominations Open</div>
+          <p class="hw-desc">Citizens and sports bodies nominate outstanding athletes across all categories via SMS and online platforms.</p>
+        </div>
+        <div class="hw-step rv d1">
+          <div class="hw-num">02</div>
+          <div class="hw-title">Public Voting</div>
+          <p class="hw-desc">Over 2 million Rwandans vote via SMS and online — making RASA truly democratic.</p>
+        </div>
+        <div class="hw-step rv d2">
+          <div class="hw-num">03</div>
+          <div class="hw-title">Expert Panel Review</div>
+          <p class="hw-desc">Sports experts and legends review nominations to confirm the final shortlist.</p>
+        </div>
+        <div class="hw-step rv d3">
+          <div class="hw-num">04</div>
+          <div class="hw-title">The RASA Gala</div>
+          <p class="hw-desc">Winners announced at a world-class gala with live performances and global media coverage.</p>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- VOTE CTA -->
   <div class="r-vote" id="rasa-vote">
-    <div class="vote-inner">
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none"></div>
+    <div style="max-width:900px;margin:0 auto;text-align:center;position:relative;padding:100px 48px">
       <div style="display:flex;justify-content:center;margin-bottom:36px">
-        <svg width="110" height="110" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#D4FF00" rx="12"/><path fill="#0A0A0A" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#0A0A0A" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#0A0A0A" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#0A0A0A" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
+        <svg width="110" height="110" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="14"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
       </div>
       <h2 class="vote-title">Your Vote<br>Changes Everything</h2>
       <p class="vote-sub">Over 3 million Rwandans participate in RASA annually. Every vote celebrates an athlete's dedication. Make yours count today.</p>
@@ -1316,7 +2038,7 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   <!-- GALLERY -->
   <div class="rsec" id="rasa-gallery">
     <div class="wrap">
-      <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px">
+      <div class="rv" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:56px">
         <div><div class="rslbl">Past Editions</div><h2 class="rsh">Event <span class="y">Gallery</span></h2></div>
         <a href="#" class="btn-ghost" onclick="goHome();goSec('portfolio');return false">Full Portfolio →</a>
       </div>
@@ -1334,14 +2056,13 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   <div class="r-foot">
     <div class="r-foot-grid">
       <div>
-        <svg width="80" height="80" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="10"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
+        <svg width="80" height="80" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="12"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase;margin-top:12px" id="rfTitle">Rwanda Annual Sports Awards</div>
         <p class="r-foot-text">Celebrating excellence, inspiring generations. Organised by Slickland Ltd — Rwanda's premier sports and event management company.</p>
-        <!-- SOCIAL LINKS -->
         <div class="r-socials">
-          <a class="r-soc" href="https://www.instagram.com/rasa_rwanda/" target="_blank" title="Instagram">IG</a>
-          <a class="r-soc" href="https://web.facebook.com/profile.php?id=61579061572146" target="_blank" title="Facebook">FB</a>
-          <a class="r-soc" href="https://x.com/rasa_rwanda_" target="_blank" title="X / Twitter">𝕏</a>
+          <a class="r-soc" href="https://www.instagram.com/rasa_rwanda/" target="_blank">IG</a>
+          <a class="r-soc" href="https://web.facebook.com/profile.php?id=61579061572146" target="_blank">FB</a>
+          <a class="r-soc" href="https://x.com/rasa_rwanda_" target="_blank">𝕏</a>
         </div>
       </div>
       <div>
@@ -1372,7 +2093,16 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 
 </div><!-- /pg-rasa -->
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<!-- THEME SWITCHER (global) -->
+<!-- THEME SWITCHER -->
+  <div class="theme-switcher" id="themeSw">
+    <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3)">Theme</span>
+    <div class="tb tb-white on" onclick="setTheme('white',this)" title="White (Default)"></div>
+    <div class="tb tb-dark" onclick="setTheme('dark',this)" title="Dark"></div>
+    <div class="tb tb-yellow" onclick="setTheme('yellow',this)" title="Yellow"></div>
+    <div class="tb tb-light" onclick="setTheme('light',this)" title="Light"></div>
+  </div>
+<script>
 // ── CURSOR ──
 const cur=document.getElementById('cur');
 document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
@@ -1381,16 +2111,14 @@ document.querySelectorAll('a,button,.sv,.po,.role-row,.nc,.tq,.pchip,.sc,.ist,.b
   el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
 });
 
-// ── PAGE NAV ──
+// ── PAGE SWITCHING ──
 function goHome(){
   document.getElementById('pg-rasa').classList.remove('active');
   document.getElementById('pg-home').classList.add('active');
-  // theme switcher always visible
   document.getElementById('navWord').innerHTML='Slick<em>land</em>';
-  // Move ticker below nav only on home page
+  document.getElementById('rasaLink').classList.remove('active-link');
   const tk=document.querySelector('.ticker');
   if(tk) tk.style.top='68px';
-  document.getElementById('rasaLink').classList.remove('active-link');
   window.scrollTo(0,0);
   setTimeout(()=>document.querySelectorAll('#pg-home .rv').forEach(el=>rvObs.observe(el)),100);
 }
@@ -1399,7 +2127,6 @@ function goRasa(){
   document.getElementById('pg-rasa').classList.add('active');
   document.getElementById('navWord').innerHTML='Slick<em>land</em> · <em>RASA</em>';
   document.getElementById('rasaLink').classList.add('active-link');
-  // Move ticker below nav + sport-bar on RASA page
   const tk=document.querySelector('.ticker');
   if(tk) tk.style.top='114px';
   window.scrollTo(0,0);
@@ -1433,38 +2160,32 @@ function animCount(el,target){
     el.textContent=target>=1000?(v/1000).toFixed(1)+'K+':Math.floor(v)+'+';
   },16);
 }
-new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.counted){e.target.querySelectorAll('[data-target]').forEach(n=>animCount(n,+n.dataset.target));e.target.dataset.counted=1}});
-},{threshold:.5}).observe(document.querySelector('.hero'));
+const heroEl=document.querySelector('.hero');
+if(heroEl){
+  new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting&&!e.target.dataset.counted){e.target.querySelectorAll('[data-target]').forEach(n=>animCount(n,+n.dataset.target));e.target.dataset.counted=1}});
+  },{threshold:.5}).observe(heroEl);
+}
 
 // ── FORMS ──
-function subDon(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Submitting...';b.disabled=true;setTimeout(()=>{document.getElementById('donOk').style.display='block';b.style.display='none';e.target.reset()},1200)}
 function subBk(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Submitting...';b.disabled=true;setTimeout(()=>{document.getElementById('bkOk').style.display='block';b.style.display='none';e.target.reset()},1200)}
 function subCt(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Sending...';b.disabled=true;setTimeout(()=>{document.getElementById('ctOk').style.display='block';b.style.display='none';e.target.reset()},1000)}
+function subDon(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Submitting...';b.disabled=true;setTimeout(()=>{document.getElementById('donOk').style.display='block';b.style.display='none';e.target.reset()},1200)}
 
 // ── RASA THEME ──
-// Logo colorway map (PNG - no switching needed)
-const footTitleColor={white:'rgba(0,0,0,.85)',dark:'rgba(0,0,0,.85)',yellow:'#D4FF00',light:'#D4FF00'};
+const footTitleColor={white:'rgba(212,255,0,.9)',dark:'rgba(0,0,0,.85)',yellow:'var(--y)',light:'var(--y)'};
 
 function setTheme(t,btn){
-  // Apply to RASA page
   const rp=document.getElementById('pg-rasa');
   rp.classList.remove('t-dark','t-yellow','t-light','t-white');
-  if(t!=='white') rp.classList.add('t-'+t);
-
-  // Apply to home page body background
+  rp.classList.add('t-'+t);
   const body=document.body;
   body.classList.remove('body-white','body-dark');
   if(t==='white') body.classList.add('body-white');
-  else body.classList.remove('body-white');
-
   document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));
   if(btn) btn.classList.add('on');
-  // Footer title color
-  const ftc=footTitleColor[t];
   const rfTitle=document.getElementById('rfTitle');
-  if(rfTitle) rfTitle.style.color=ftc;
-  // Switcher label colour
+  if(rfTitle) rfTitle.style.color=footTitleColor[t]||'';
   const swLabel=document.querySelector('#themeSw span');
   if(swLabel) swLabel.style.color=(t==='white'||t==='light'||t==='yellow')?'rgba(0,0,0,.4)':'rgba(255,255,255,.3)';
 }
@@ -1475,18 +2196,10 @@ function setCw(t){
     if(el) el.classList.toggle('on',k===t);
   });
 }
+
+// ── INIT — Default white theme ──
+setTheme('white', document.querySelector('.tb-white'));
+setCw('dark');
 </script>
-
-
-<!-- THEME SWITCHER (global) -->
-<!-- THEME SWITCHER -->
-  <div class="theme-switcher" id="themeSw">
-    <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3)">Theme</span>
-    <div class="tb tb-white on" onclick="setTheme('white',this)" title="White (Default)"></div>
-    <div class="tb tb-dark" onclick="setTheme('dark',this)" title="Dark"></div>
-    <div class="tb tb-yellow" onclick="setTheme('yellow',this)" title="Yellow"></div>
-    <div class="tb tb-light" onclick="setTheme('light',this)" title="Light"></div>
-  </div>
-
 </body>
 </html>
