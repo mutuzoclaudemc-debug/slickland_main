@@ -28,7 +28,7 @@ body{background:var(--blk);color:var(--wh);font-family:'Barlow',sans-serif;overf
 @keyframes tickroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,7,7,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(212,255,0,.07)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,7,7,.98)!important;backdrop-filter:blur(24px);border-bottom:1px solid rgba(212,255,0,.12)}
 nav.scrolled{border-bottom:1px solid rgba(212,255,0,.12)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:none}
@@ -310,10 +310,10 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 .body-white nav{background:rgba(10,10,10,.98)!important;border-bottom:1px solid rgba(212,255,0,.1)!important}
 .body-white .nav-wordmark{color:#0A0A0A}
 .body-white .nav-wordmark em{color:var(--y)}
-.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65)}
+.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(255,255,255,.65)}
 .body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A;background:rgba(0,0,0,.07)}
 .body-white .nav-links>li>a.active-link{color:#0A0A0A;background:rgba(0,0,0,.07)}
-.body-white .drop{background:#e8e8e8;border-color:rgba(0,0,0,.12)}
+.body-white .drop{background:#111111;border-color:rgba(255,255,255,.08)}
 .body-white .drop a{color:rgba(0,0,0,.7)}
 .body-white .drop a:hover{background:rgba(0,0,0,.07);color:#0A0A0A}
 .body-white .talk-btn{background:#0A0A0A;color:#D4FF00}
@@ -974,13 +974,13 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 .body-white nav{background:rgba(248,248,248,.98) !important;border-bottom-color:rgba(0,0,0,.1) !important}
 .body-white .nav-wordmark{color:#ffffff !important}
 .body-white .nav-wordmark em{color:var(--y)}
-.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65) !important}
-.body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A !important;background:rgba(0,0,0,.06) !important}
-.body-white .drop{background:#e8e8e8;border-color:rgba(0,0,0,.12)}
-.body-white .drop a{color:rgba(0,0,0,.65) !important}
-.body-white .drop a:hover{color:#0A0A0A !important;background:rgba(0,0,0,.07)}
+.body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(255,255,255,.65)}
+.body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#ffffff;background:rgba(255,255,255,.08)}
+.body-white .drop{background:#111111;border-color:rgba(255,255,255,.08)}
+.body-white .drop a{color:rgba(255,255,255,.65)}
+.body-white .drop a:hover{color:#ffffff;background:rgba(255,255,255,.08)}
 .body-white .talk-btn{background:#0A0A0A !important;color:#D4FF00 !important}
-.body-white .live-pill{color:#FF3030;border-color:rgba(255,48,48,.3);background:rgba(255,48,48,.08)}
+.body-white .live-pill{color:#FF3030;border-color:rgba(255,48,48,.4);background:rgba(255,48,48,.1)}
 
 /* Hero */
 .body-white .hero-h1,.body-white .hero-line1,.body-white .hero-line2{color:#0A0A0A !important}
@@ -1481,6 +1481,183 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 .body-white .nc:hover .nc-arr{background:#0A0A0A;color:#D4FF00}
 .body-white .nc-inner{
 .nav-wordmark em{color:var(--y)!important}color:#0A0A0A}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — COMPLETE
+   ══════════════════════════════════════════════════════ */
+
+/* Hamburger button */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;margin-left:8px}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile menu */
+.mob-menu{display:none;flex-direction:column;background:rgba(7,7,7,.99);border-top:1px solid rgba(212,255,0,.1);padding:16px 0 24px}
+.mob-menu.open{display:flex}
+.mob-menu a{padding:14px 28px;color:rgba(255,255,255,.7);text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(255,255,255,.04);transition:color .2s,background .2s}
+.mob-menu a:hover{color:#fff;background:rgba(255,255,255,.04)}
+.mob-menu .mob-cta{background:var(--y);color:var(--blk)!important;margin:16px 28px 0;border-radius:6px;text-align:center;border:none!important}
+.mob-menu .mob-cta:hover{opacity:.88}
+
+@media(max-width:900px){
+  /* Nav */
+  .hamburger{display:flex}
+  .nav-links{display:none}
+  .nav-right .talk-btn{display:none}
+  .nav-inner{padding:0 20px}
+
+  /* Ticker */
+  .ticker{font-size:12px}
+  .ticker-tag{font-size:10px;padding:0 8px}
+
+  /* Hero */
+  .hero{margin-top:106px;min-height:auto;padding:80px 0 60px}
+  .hero-h1{font-size:clamp(56px,14vw,110px)}
+  .hero-content{padding:0 24px}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  .hero-btns{flex-direction:column;align-items:flex-start;gap:12px}
+  .btn-primary,.btn-ghost{width:100%;justify-content:center}
+  .float-tag,.float-tag2{display:none}
+  .hero-letters{opacity:.04;width:90vw;right:-10%}
+
+  /* Scroll strip */
+  .scroll-strip{padding:12px 20px}
+  .ss-line{display:none}
+
+  /* Marquee */
+  .marq-item{font-size:18px}
+
+  /* Sections */
+  .wrap{padding:0 20px}
+  section,.about-sec,.news-sec,.sv-sec,.ing-sec,.partners-sec,.testi-sec,.bk-sec,.contact-sec,.donation-sec{padding:64px 0}
+
+  /* News grid */
+  .news-grid{grid-template-columns:1fr!important;grid-template-rows:auto}
+  .news-grid .nc:first-child{grid-column:1;grid-row:auto}
+
+  /* About section */
+  .about-grid,.about-inner{grid-template-columns:1fr!important;gap:40px}
+  .rasa-quad{min-height:220px}
+
+  /* Services */
+  .sv-grid{grid-template-columns:1fr!important}
+
+  /* Partners */
+  .partners-inner{flex-wrap:wrap;gap:16px;justify-content:center}
+
+  /* Testimonials */
+  .testi-wrap{gap:16px}
+  .tq{min-width:280px}
+
+  /* Booking/Donation */
+  .bk-inner{grid-template-columns:1fr!important;gap:40px}
+
+  /* Contact */
+  .ct-inner{grid-template-columns:1fr!important;gap:40px}
+  .tm-grid{grid-template-columns:1fr 1fr!important}
+
+  /* Forms */
+  .frow{flex-direction:column;gap:0}
+
+  /* Footer */
+  footer .wrap > div{grid-template-columns:1fr 1fr!important;gap:32px}
+  .ft-col:first-child{grid-column:span 2}
+
+  /* RASA page */
+  .rh{padding-top:160px;min-height:auto;padding-bottom:60px}
+  .rh-title{font-size:clamp(32px,8vw,52px)}
+  .rh-tagline{font-size:clamp(18px,5vw,30px)}
+  .r-stats-row{flex-wrap:wrap}
+  .r-stat{flex:1 1 50%;border-bottom:1px solid rgba(0,0,0,.1);border-right:none}
+  .r-stat:nth-child(odd){border-right:1px solid rgba(0,0,0,.1)}
+  .aw-grid{grid-template-columns:1fr!important}
+  .hw-grid{grid-template-columns:1fr 1fr!important}
+  .rg-grid{grid-template-columns:1fr!important}
+  .rg-item.tall{grid-row:span 1}
+  .r-foot-grid{grid-template-columns:1fr!important;gap:36px}
+  .r-foot-bar{flex-direction:column;gap:10px;text-align:center}
+  .cw-row{gap:14px}
+  .cw-box{width:80px;height:80px}
+  .rh-btns{flex-direction:column;align-items:center;gap:12px}
+  .rh-btns .btn-primary,.rh-btns .btn-ghost{width:100%;max-width:320px;justify-content:center}
+  .vote-btns{flex-direction:column;align-items:center;gap:12px}
+  .btn-dk,.btn-dk-out{width:100%;max-width:320px;justify-content:center}
+
+  /* Theme switcher on mobile */
+  .theme-switcher{bottom:16px;right:16px;padding:6px 10px;gap:6px}
+  .tb{width:28px;height:28px}
+  #themeSw span{display:none}
+
+  /* Sport bar */
+  .sport-bar-inner{gap:0;overflow-x:auto;padding:0 12px}
+  .sptab{font-size:11px;padding:12px 10px;white-space:nowrap}
+}
+
+@media(max-width:480px){
+  .hero-h1{font-size:clamp(48px,16vw,88px)}
+  .hw-grid{grid-template-columns:1fr!important}
+  .tm-grid{grid-template-columns:1fr!important}
+  .r-stat{flex:1 1 100%;border-right:none!important}
+  footer .wrap > div{grid-template-columns:1fr!important}
+  .ft-col:first-child{grid-column:span 1}
+}
+
+/* ══════════════════════════════════════════════
+   NAV BAR — ALWAYS BLACK REGARDLESS OF THEME
+   This block overrides all previous theme rules
+   ══════════════════════════════════════════════ */
+nav,
+.body-white nav,
+.body-dark nav {
+  background: rgba(7,7,7,.98) !important;
+  border-bottom: 1px solid rgba(212,255,0,.1) !important;
+}
+nav .nav-links>li>a,
+nav .nav-links>li>button,
+.body-white .nav-links>li>a,
+.body-white .nav-links>li>button {
+  color: rgba(255,255,255,.65) !important;
+}
+nav .nav-links>li>a:hover,
+nav .nav-links>li>button:hover,
+.body-white .nav-links>li>a:hover,
+.body-white .nav-links>li>button:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,.07) !important;
+}
+nav .nav-links>li>a.active-link,
+.body-white .nav-links>li>a.active-link {
+  color: var(--y) !important;
+  background: transparent !important;
+}
+nav .drop,
+.body-white .drop {
+  background: #0f0f0f !important;
+  border-color: rgba(255,255,255,.07) !important;
+}
+nav .drop a,
+.body-white .drop a {
+  color: rgba(255,255,255,.6) !important;
+}
+nav .drop a:hover,
+.body-white .drop a:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,.06) !important;
+}
+nav .chev,
+.body-white .chev {
+  color: rgba(255,255,255,.4) !important;
+}
+nav .nav-wordmark,
+.body-white .nav-wordmark {
+  color: #ffffff !important;
+}
+nav .nav-wordmark em,
+.body-white .nav-wordmark em {
+  color: var(--y) !important;
+}
 </style>
 </head>
 <body>
@@ -1504,7 +1681,6 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 <nav id="nav">
   <div class="nav-inner">
     <a class="nav-logo" href="#" onclick="goHome();return false">
-      <svg width="44" height="44" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;border-radius:8px;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="8"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
       <span class="nav-wordmark" id="navWord">Slick<em>land</em></span>
     </a>
     <ul class="nav-links">
@@ -1527,7 +1703,20 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
     <div class="nav-right">
       <div class="live-pill"><div class="live-blink"></div>Live</div>
       <a class="talk-btn" href="#" onclick="goHome();goSec('booking');return false">Let's talk →</a>
+      <button class="hamburger" id="hamburger" onclick="toggleMob()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+  <!-- MOBILE MENU -->
+  <div class="mob-menu" id="mobMenu">
+    <a href="#" onclick="goHome();closeMob();return false">Home</a>
+    <a href="#" onclick="goHome();goSec('about');closeMob();return false">About</a>
+    <a href="#" onclick="goHome();goSec('services');closeMob();return false">Services</a>
+    <a href="#" onclick="goRasa();closeMob();return false">RASA ↗</a>
+    <a href="#" onclick="goHome();goSec('donation');closeMob();return false">Donate</a>
+    <a href="#" onclick="goHome();goSec('contact');closeMob();return false">Contact</a>
+    <a href="#" class="mob-cta" onclick="goHome();goSec('booking');closeMob();return false">Let's talk →</a>
   </div>
 </nav>
 
@@ -2212,6 +2401,22 @@ function setCw(t){
     if(el) el.classList.toggle('on',k===t);
   });
 }
+
+// ── MOBILE MENU ──
+function toggleMob(){
+  const h=document.getElementById('hamburger');
+  const m=document.getElementById('mobMenu');
+  h.classList.toggle('open');
+  m.classList.toggle('open');
+}
+function closeMob(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobMenu').classList.remove('open');
+}
+// Close mobile menu on scroll
+window.addEventListener('scroll',()=>{
+  if(document.getElementById('mobMenu').classList.contains('open')) closeMob();
+},{ passive:true });
 
 // ── INIT — Default white theme ──
 setTheme('dark', document.querySelector('.tb-dark'));
