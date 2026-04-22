@@ -32,7 +32,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(7,7,7,.98);b
 nav.scrolled{border-bottom:1px solid rgba(212,255,0,.12)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:none}
-.nav-wordmark{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.07em;text-transform:uppercase;color:var(--wh)}
+.nav-wordmark{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.07em;text-transform:uppercase;color:#ffffff}
 .nav-wordmark em{color:var(--y);font-style:normal}
 .nav-links{display:flex;align-items:center;gap:2px;list-style:none}
 .nav-links>li{position:relative}
@@ -307,9 +307,9 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   color: #0A0A0A;
 }
 /* White theme — specific overrides for elements that need it */
-.body-white nav{background:rgba(242,242,242,.97)!important;border-bottom-color:rgba(0,0,0,.1)}
+.body-white nav{background:rgba(10,10,10,.98)!important;border-bottom:1px solid rgba(212,255,0,.1)!important}
 .body-white .nav-wordmark{color:#0A0A0A}
-.body-white .nav-wordmark em{color:#0A0A0A}
+.body-white .nav-wordmark em{color:var(--y)}
 .body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65)}
 .body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A;background:rgba(0,0,0,.07)}
 .body-white .nav-links>li>a.active-link{color:#0A0A0A;background:rgba(0,0,0,.07)}
@@ -338,9 +338,9 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 .body-white .hero-bg{background:#f2f2f2}
 .body-white .hero-grid{background-image:linear-gradient(rgba(0,0,0,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.05) 1px,transparent 1px)}
 .body-white .hero-radial{background:radial-gradient(circle,rgba(0,0,0,.04) 0%,transparent 60%)}
-.body-white .hero-line1{color:#0A0A0A}
+.body-white .hero-line1{display:block;color:var(--y);padding-top:14px}
 .hero-line1{display:block;color:var(--y)}
-.hero-line2{display:block;color:var(--wh)}
+.hero-line2{display:block;color:#ffffff}
 .hero-line3{display:block;margin-top:.1em}
 .rasa-logo-mark svg{color:var(--y)}
 .body-white .hero-line2{color:#0A0A0A}
@@ -972,8 +972,8 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 
 /* Navigation */
 .body-white nav{background:rgba(248,248,248,.98) !important;border-bottom-color:rgba(0,0,0,.1) !important}
-.body-white .nav-wordmark{color:#0A0A0A !important}
-.body-white .nav-wordmark em{color:#0A0A0A}
+.body-white .nav-wordmark{color:#ffffff !important}
+.body-white .nav-wordmark em{color:var(--y)}
 .body-white .nav-links>li>a,.body-white .nav-links>li>button{color:rgba(0,0,0,.65) !important}
 .body-white .nav-links>li>a:hover,.body-white .nav-links>li>button:hover{color:#0A0A0A !important;background:rgba(0,0,0,.06) !important}
 .body-white .drop{background:#e8e8e8;border-color:rgba(0,0,0,.12)}
@@ -1479,7 +1479,8 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 .body-white .nc-tag{background:#0A0A0A;color:#D4FF00}
 .body-white .nc-arr{background:rgba(0,0,0,.12);color:#0A0A0A}
 .body-white .nc:hover .nc-arr{background:#0A0A0A;color:#D4FF00}
-.body-white .nc-inner{color:#0A0A0A}
+.body-white .nc-inner{
+.nav-wordmark em{color:var(--y)!important}color:#0A0A0A}
 </style>
 </head>
 <body>
@@ -2112,8 +2113,8 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
 <!-- THEME SWITCHER -->
   <div class="theme-switcher" id="themeSw">
     <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.3)">Theme</span>
-    <div class="tb tb-white on" onclick="setTheme('white',this)" title="White (Default)"></div>
-    <div class="tb tb-dark" onclick="setTheme('dark',this)" title="Dark"></div>
+    <div class="tb tb-white" onclick="setTheme('white',this)" title="White (Default)"></div>
+    <div class="tb tb-dark on" onclick="setTheme('dark',this)" title="Dark"></div>
     <div class="tb tb-yellow" onclick="setTheme('yellow',this)" title="Yellow"></div>
     <div class="tb tb-light" onclick="setTheme('light',this)" title="Light"></div>
   </div>
@@ -2213,7 +2214,7 @@ function setCw(t){
 }
 
 // ── INIT — Default white theme ──
-setTheme('white', document.querySelector('.tb-white'));
+setTheme('dark', document.querySelector('.tb-dark'));
 setCw('dark');
 </script>
 </body>
