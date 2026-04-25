@@ -1513,11 +1513,14 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   .ticker-tag{font-size:10px;padding:0 8px}
 
   /* Hero */
-  .hero{margin-top:106px;min-height:auto;padding:80px 0 60px}
+  .hero{margin-top:106px;min-height:auto;padding:60px 0 0;height:auto}
   .hero-h1{font-size:clamp(56px,14vw,110px)}
-  .hero-content{padding:0 24px}
-  .hero-stats{gap:24px;flex-wrap:wrap}
-  .hero-btns{flex-direction:column;align-items:flex-start;gap:12px}
+  .hero-content{padding:0 20px 40px;max-width:100%}
+  .hero-stats{position:relative!important;bottom:auto!important;right:auto!important;padding:28px 20px;width:100%;justify-content:space-between;gap:0;border-top:1px solid rgba(212,255,0,.08);background:rgba(0,0,0,.25);animation:none;display:flex}
+  .hero-stats>div{flex:1;text-align:center;padding:0 4px}
+  .hs-num{font-size:26px}
+  .hs-lbl{font-size:9px}
+  .hero-btns{flex-direction:column;align-items:stretch;gap:12px}
   .btn-primary,.btn-ghost{width:100%;justify-content:center}
   .float-tag,.float-tag2{display:none}
   .hero-letters{opacity:.04;width:90vw;right:-10%}
@@ -1566,9 +1569,12 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.04);padding:
   .ft-col:first-child{grid-column:span 2}
 
   /* RASA page */
-  .rh{padding-top:160px;min-height:auto;padding-bottom:60px}
-  .rh-title{font-size:clamp(32px,8vw,52px)}
-  .rh-tagline{font-size:clamp(18px,5vw,30px)}
+  .rh{padding-top:160px;min-height:auto;padding-bottom:80px;height:auto}
+  .rh-content{padding:0 20px;max-width:100%}
+  .rh-title{font-size:clamp(30px,8vw,50px)}
+  .rh-tagline{font-size:clamp(16px,5vw,28px)}
+  .rh-sub{font-size:14px;margin-bottom:32px}
+  .rh-logo svg{width:140px!important;height:140px!important}
   .r-stats-row{flex-wrap:wrap}
   .r-stat{flex:1 1 50%;border-bottom:1px solid rgba(0,0,0,.1);border-right:none}
   .r-stat:nth-child(odd){border-right:1px solid rgba(0,0,0,.1)}
@@ -1657,6 +1663,12 @@ nav .nav-wordmark,
 nav .nav-wordmark em,
 .body-white .nav-wordmark em {
   color: var(--y) !important;
+}
+
+/* Hero stats mobile — always visible regardless of theme */
+@media(max-width:900px){
+  .hero-stats{display:flex!important;position:relative!important;bottom:auto!important;right:auto!important}
+  .body-white .hero-stats{background:rgba(0,0,0,.15)}
 }
 </style>
 </head>
