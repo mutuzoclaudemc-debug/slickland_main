@@ -2,6 +2,34 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Slickland Ltd — Rwanda's premier sports and event management company. Home of the Rwanda Annual Sports Awards (RASA). Celebrating excellence, inspiring generations.">
+  <meta name="keywords" content="RASA, Rwanda Annual Sports Awards, Slickland, Rwanda sports, sports management Rwanda, Kigali events, Ingenzi program, Rwanda athletes">
+  <meta name="author" content="Slickland Ltd">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#D4FF00">
+
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Slickland Ltd — Rwanda Annual Sports Awards (RASA) 2025">
+  <meta property="og:description" content="Rwanda's premier sports and event management company. Vote for Rwanda's best athletes at RASA 2025. Celebrating excellence, inspiring generations.">
+  <meta property="og:url" content="https://slickland.com">
+  <meta property="og:site_name" content="Slickland Ltd">
+  <meta property="og:image" content="https://slickland.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_RW">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rasa_rwanda_">
+  <meta name="twitter:title" content="RASA 2025 — Rwanda Annual Sports Awards">
+  <meta name="twitter:description" content="Vote for Rwanda's best athletes. The premier sports awards ceremony in East Africa.">
+  <meta name="twitter:image" content="https://slickland.com/og-image.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://slickland.com">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Slickland Ltd — Rwanda's Premier Sports & Event Management</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1670,9 +1698,106 @@ nav .nav-wordmark em,
   .hero-stats{display:flex!important;position:relative!important;bottom:auto!important;right:auto!important}
   .body-white .hero-stats{background:rgba(0,0,0,.15)}
 }
+
+/* ══════════════════════════════════════════════════════
+   NEW FEATURES CSS
+   ══════════════════════════════════════════════════════ */
+
+/* ── SPLASH SCREEN ── */
+.splash{position:fixed;inset:0;background:#0A0A0A;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;z-index:9999;transition:opacity .6s,visibility .6s}
+.splash.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.splash-logo{animation:splashPop .8s ease both}
+.splash-logo svg{filter:drop-shadow(0 0 30px rgba(212,255,0,.3))}
+@keyframes splashPop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+.splash-text{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.9);animation:riseUp .7s .4s both}
+.splash-text span{color:var(--y)}
+.splash-bar{width:160px;height:2px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden;animation:riseUp .7s .5s both}
+.splash-progress{height:100%;background:var(--y);width:0%;animation:splashLoad 1.8s .3s ease-out forwards}
+@keyframes splashLoad{to{width:100%}}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:90px;right:28px;z-index:490;background:#25D366;color:#fff;border-radius:50px;padding:12px 18px 12px 14px;display:flex;align-items:center;gap:10px;text-decoration:none;box-shadow:0 8px 32px rgba(37,211,102,.4);transition:transform .25s,box-shadow .25s;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+.wa-float:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(37,211,102,.55)}
+.wa-float svg{width:22px;height:22px;flex-shrink:0}
+.wa-float span{white-space:nowrap}
+@media(max-width:600px){.wa-float span{display:none}.wa-float{padding:14px;border-radius:50%;bottom:80px;right:20px}}
+
+/* ── BACK TO TOP ── */
+.back-to-top{position:fixed;bottom:28px;right:28px;z-index:490;width:44px;height:44px;background:var(--y);color:var(--blk);border:none;border-radius:50%;font-size:18px;font-weight:900;cursor:pointer;box-shadow:0 4px 20px rgba(212,255,0,.3);transition:all .3s;opacity:0;transform:translateY(20px);pointer-events:none}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:all}
+.back-to-top:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(212,255,0,.5)}
+@media(max-width:600px){.back-to-top{bottom:20px;right:20px;width:38px;height:38px;font-size:16px}}
+
+/* ── COUNTDOWN TIMER ── */
+.countdown-wrap{text-align:center}
+.countdown-label{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(0,0,0,.5);margin-bottom:16px;font-weight:700}
+.countdown-row{display:flex;align-items:center;justify-content:center;gap:8px}
+.cd-unit{background:rgba(0,0,0,.15);border-radius:10px;padding:16px 20px;min-width:80px;text-align:center}
+.cd-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:52px;line-height:1;color:#0A0A0A}
+.cd-lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,0,0,.45);margin-top:4px;font-weight:700}
+.cd-sep{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;color:rgba(0,0,0,.25);line-height:1;margin-bottom:16px}
+/* Override for dark/other themes where vote section has yellow bg */
+.t-yellow .cd-num,.t-light .cd-num,.t-white .cd-num{color:#0A0A0A}
+.t-dark .countdown-label{color:rgba(0,0,0,.55)}
+.t-dark .cd-num{color:#0A0A0A}
+@media(max-width:600px){.cd-unit{padding:10px 12px;min-width:60px}.cd-num{font-size:36px}.cd-sep{font-size:28px}}
+
+/* ── NEWSLETTER ── */
+.nl-sec{background:var(--d1);padding:80px 0}
+.nl-inner{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.nl-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.nl-input{flex:1;min-width:160px;background:var(--d2);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:14px 16px;color:var(--wh);font-family:'Barlow',sans-serif;font-size:14px;outline:none;transition:border-color .2s}
+.nl-input:focus{border-color:var(--y)}
+.nl-input::placeholder{color:rgba(255,255,255,.3)}
+.nl-btn{background:var(--y);color:var(--blk);border:none;border-radius:6px;padding:14px 24px;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:opacity .2s,transform .2s;white-space:nowrap}
+.nl-btn:hover{opacity:.88;transform:translateY(-1px)}
+.nl-tags{display:flex;gap:12px;flex-wrap:wrap;margin-top:4px}
+.nl-tag{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.45);cursor:pointer;user-select:none}
+.nl-tag input{accent-color:var(--y);cursor:pointer}
+.nl-note{font-size:11px;color:rgba(255,255,255,.25);margin-top:14px}
+/* white theme */
+.body-white .nl-sec{background:#e8e8e8}
+.body-white .nl-input{background:#d8d8d8;border-color:rgba(0,0,0,.1);color:#0A0A0A}
+.body-white .nl-input::placeholder{color:rgba(0,0,0,.35)}
+.body-white .nl-tag{color:rgba(0,0,0,.5)}
+.body-white .nl-note{color:rgba(0,0,0,.3)}
+@media(max-width:900px){.nl-inner{grid-template-columns:1fr;gap:32px}.nl-row{flex-direction:column}.nl-btn{width:100%}}
+
+/* ── YOUTUBE VIDEO SECTION ── */
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.vid-placeholder{background:var(--d2);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.05);transition:border-color .2s,transform .2s}
+.vid-placeholder:hover{border-color:rgba(212,255,0,.2);transform:translateY(-3px)}
+.vid-thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#0d1400,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;position:relative;overflow:hidden;cursor:pointer}
+.vid-play-btn{width:56px;height:56px;background:var(--y);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blk);font-weight:900;transition:transform .2s;padding-left:4px}
+.vid-placeholder:hover .vid-play-btn{transform:scale(1.1)}
+.vid-label{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;color:rgba(255,255,255,.35);letter-spacing:.1em;text-align:center;padding:0 16px}
+.vid-meta{padding:18px}
+.vid-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:16px;text-transform:uppercase;color:#fff;margin-bottom:4px}
+.vid-sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:10px}
+.vid-link{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--y);text-decoration:none}
+.vid-link:hover{text-decoration:underline}
+/* themes */
+.t-yellow .vid-placeholder,.t-light .vid-placeholder,.t-white .vid-placeholder{background:rgba(0,0,0,.08)}
+.t-yellow .vid-title,.t-light .vid-title,.t-white .vid-title{color:#0A0A0A}
+.t-yellow .vid-sub,.t-light .vid-sub,.t-white .vid-sub{color:rgba(0,0,0,.5)}
+.t-yellow .vid-link,.t-light .vid-link,.t-white .vid-link{color:#0A0A0A}
+@media(max-width:900px){.vid-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
+<div class="splash" id="splash">
+  <div class="splash-logo">
+    <svg width="100" height="100" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg">
+      <rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="20"/>
+      <path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/>
+      <path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/>
+      <path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/>
+      <path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/>
+    </svg>
+  </div>
+  <div class="splash-text">RASA <span>2025</span></div>
+  <div class="splash-bar"><div class="splash-progress"></div></div>
+</div>
 <div id="cur"></div>
 
 <!-- ── PIXEL-PERFECT RASA LOGO SVG COMPONENT ──
@@ -1903,6 +2028,38 @@ nav .nav-wordmark em,
 
   <!-- PARTNERS -->
   <div class="partners-sec"><div class="wrap"><div class="p-lbl rv">Trusted by leading organisations across Rwanda and the world</div><div class="p-row rv d1"><div class="pchip">MINISPORTS</div><div class="pchip">Mastercard</div><div class="pchip">FIFA</div><div class="pchip">FIBA</div><div class="pchip">NBA Africa</div><div class="pchip">IOC</div><div class="pchip">FIVB</div><div class="pchip">Sport on the Wheel</div></div></div></div>
+
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="nl-sec">
+    <div class="wrap">
+      <div class="nl-inner rv">
+        <div class="nl-left">
+          <div class="slbl">Stay In The Loop</div>
+          <h2 class="sh">Get RASA <span class="y">Updates</span></h2>
+          <p class="sp">Be first to know when RASA 2025 nominations open, voting begins, and the Gala date is announced. No spam — just Rwanda's biggest sports news.</p>
+        </div>
+        <div class="nl-right rv d1">
+          <form class="nl-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="subNl(event)">
+            <input type="hidden" name="form-name" value="newsletter">
+            <p style="display:none"><input name="bot-field"></p>
+            <div class="nl-row">
+              <input class="nl-input" type="text" name="name" placeholder="Your name" required>
+              <input class="nl-input" type="email" name="email" placeholder="your@email.com" required>
+              <button type="submit" class="nl-btn">Subscribe →</button>
+            </div>
+            <div class="nl-tags">
+              <label class="nl-tag"><input type="checkbox" name="topics" value="RASA" checked> RASA Updates</label>
+              <label class="nl-tag"><input type="checkbox" name="topics" value="Ingenzi"> Ingenzi Program</label>
+              <label class="nl-tag"><input type="checkbox" name="topics" value="Events"> Events</label>
+              <label class="nl-tag"><input type="checkbox" name="topics" value="Athletes"> Athletes</label>
+            </div>
+            <div class="form-ok" id="nlOk">✓ Subscribed! You'll hear from us soon.</div>
+          </form>
+          <p class="nl-note">Join 12,000+ Rwandans already following RASA · Unsubscribe anytime</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- TESTIMONIALS -->
   <section class="testi-sec"><div class="wrap rv" style="text-align:center"><div class="slbl" style="justify-content:center">What People Say</div><h2 class="sh">Voices of <span class="y">Excellence</span></h2></div>
@@ -2240,6 +2397,20 @@ nav .nav-wordmark em,
   <div class="r-vote" id="rasa-vote">
     <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,0,0,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none"></div>
     <div style="max-width:900px;margin:0 auto;text-align:center;position:relative;padding:100px 48px">
+      <!-- COUNTDOWN TIMER -->
+      <div class="countdown-wrap" style="margin-bottom:44px">
+        <div class="countdown-label">RASA Gala 2025 Countdown</div>
+        <div class="countdown-row">
+          <div class="cd-unit"><div class="cd-num" id="cd-days">00</div><div class="cd-lbl">Days</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-num" id="cd-hours">00</div><div class="cd-lbl">Hours</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-num" id="cd-mins">00</div><div class="cd-lbl">Minutes</div></div>
+          <div class="cd-sep">:</div>
+          <div class="cd-unit"><div class="cd-num" id="cd-secs">00</div><div class="cd-lbl">Seconds</div></div>
+        </div>
+      </div>
+
       <div style="display:flex;justify-content:center;margin-bottom:36px">
         <svg width="110" height="110" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="14"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg>
       </div>
@@ -2265,6 +2436,55 @@ nav .nav-wordmark em,
         <div class="rg-item"><div class="rg-bg" style="background:linear-gradient(135deg,#180a0a,#111)">RED<br>CARPET</div><div class="rg-line"></div><div class="rg-ov"><div class="rg-tag">Ceremony</div><div class="rg-name">RASA Red Carpet</div><div class="rg-meta">KCC · 2025</div></div></div>
         <div class="rg-item"><div class="rg-bg" style="background:linear-gradient(135deg,#0a1800,#111)">DISTRICT<br>VOTING</div><div class="rg-line"></div><div class="rg-ov"><div class="rg-tag">Community</div><div class="rg-name">Public Voting Campaign</div><div class="rg-meta">30 Districts · 2024</div></div></div>
         <div class="rg-item"><div class="rg-bg" style="background:linear-gradient(135deg,#18000a,#111)">AWARD<br>TROPHY</div><div class="rg-line"></div><div class="rg-ov"><div class="rg-tag">Trophy Design</div><div class="rg-name">Best Player of the Year</div><div class="rg-meta">RASA Award Collection</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RASA HIGHLIGHTS VIDEO -->
+  <div class="rsec" id="rasa-videos" style="padding:80px 48px">
+    <div class="wrap">
+      <div class="rv" style="text-align:center;margin-bottom:48px">
+        <div class="rslbl" style="justify-content:center">Event Highlights</div>
+        <h2 class="rsh" style="text-align:center">Watch <span class="y">RASA Live</span></h2>
+        <p class="rsp" style="text-align:center;margin:0 auto">Relive the excitement of Rwanda's biggest sports night. More videos coming soon.</p>
+      </div>
+      <div class="vid-grid rv d1">
+        <div class="vid-placeholder">
+          <div class="vid-thumb">
+            <div class="vid-play-btn">▶</div>
+            <div class="vid-label">RASA Gala 2025 — Full Highlights</div>
+          </div>
+          <div class="vid-meta">
+            <div class="vid-title">RASA Gala 2025 Highlights</div>
+            <div class="vid-sub">Kigali Convention Centre · March 2025</div>
+            <a href="https://www.youtube.com/@rasarwanda" target="_blank" class="vid-link">Watch on YouTube →</a>
+          </div>
+        </div>
+        <div class="vid-placeholder">
+          <div class="vid-thumb">
+            <div class="vid-play-btn">▶</div>
+            <div class="vid-label">Ingenzi Program — Impact Stories</div>
+          </div>
+          <div class="vid-meta">
+            <div class="vid-title">Ingenzi Sports Program 2024</div>
+            <div class="vid-sub">Nationwide · Documentary</div>
+            <a href="https://www.youtube.com/@rasarwanda" target="_blank" class="vid-link">Watch on YouTube →</a>
+          </div>
+        </div>
+        <div class="vid-placeholder">
+          <div class="vid-thumb">
+            <div class="vid-play-btn">▶</div>
+            <div class="vid-label">Best Moments — RASA Awards</div>
+          </div>
+          <div class="vid-meta">
+            <div class="vid-title">RASA Best Moments Compilation</div>
+            <div class="vid-sub">2023 – 2025 Edition</div>
+            <a href="https://www.youtube.com/@rasarwanda" target="_blank" class="vid-link">Watch on YouTube →</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px" class="rv d2">
+        <a href="https://www.youtube.com/@rasarwanda" target="_blank" class="btn-ghost">Subscribe on YouTube →</a>
       </div>
     </div>
   </div>
@@ -2433,6 +2653,39 @@ window.addEventListener('scroll',()=>{
 // ── INIT — Default white theme ──
 setTheme('dark', document.querySelector('.tb-dark'));
 setCw('dark');
+// ── SPLASH SCREEN ──
+window.addEventListener('load',()=>{
+  setTimeout(()=>{const s=document.getElementById('splash');if(s)s.classList.add('hidden')},2200);
+});
+
+// ── BACK TO TOP ──
+const btt=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{if(btt)btt.classList.toggle('visible',window.scrollY>400)},{passive:true});
+
+// ── COUNTDOWN TIMER ── (RASA Gala: November 28, 2025)
+function updateCountdown(){
+  const gala=new Date('2025-11-28T19:00:00+02:00').getTime();
+  const diff=gala-Date.now();
+  const pad=n=>String(Math.max(0,n)).padStart(2,'0');
+  if(diff<=0){['cd-days','cd-hours','cd-mins','cd-secs'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent='00'});return;}
+  const d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+  ['cd-days','cd-hours','cd-mins','cd-secs'].forEach((id,i)=>{const e=document.getElementById(id);if(e)e.textContent=pad([d,h,m,s][i])});
+}
+updateCountdown();setInterval(updateCountdown,1000);
+
+// ── NEWSLETTER FORM ──
+function subNl(e){e.preventDefault();const b=e.target.querySelector('.nl-btn');b.textContent='Subscribing...';b.disabled=true;setTimeout(()=>{const ok=document.getElementById('nlOk');if(ok)ok.style.display='block';b.style.display='none';e.target.reset()},1000);}
+
 </script>
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/250782789299?text=Hello%20Slickland%2C%20I%20would%20like%20to%20enquire%20about..." target="_blank" title="Chat with us on WhatsApp" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.553 4.103 1.523 5.824L.057 23.57a.5.5 0 00.608.625l5.946-1.557A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.9a9.878 9.878 0 01-5.031-1.376l-.361-.214-3.733.978.996-3.64-.235-.374A9.865 9.865 0 012.1 12C2.1 6.534 6.534 2.1 12 2.1c5.466 0 9.9 4.434 9.9 9.9 0 5.466-4.434 9.9-9.9 9.9z"/>
+  </svg>
+  <span>Chat with us</span>
+</a>
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top" aria-label="Back to top">↑</button>
 </body>
 </html>
