@@ -404,13 +404,13 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
 .sptab{background:none;border:none;border-bottom:2px solid transparent;padding:14px 16px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);cursor:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
 .sptab.on,.sptab:hover{color:var(--y);border-bottom-color:var(--y)}
 .rh{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding-top:152px}
-.rh-content{position:relative;z-index:2;text-align:center;padding:0 40px;max-width:960px}
+.rh-content{position:relative;z-index:5;text-align:center;padding:0 40px;max-width:960px}
 .rh-logo{display:flex;justify-content:center;margin-bottom:40px;animation:logoIn 1s .2s both}
 @keyframes logoIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
-.rh-bg{position:absolute;inset:0;transition:background .5s}
+.rh-bg{position:absolute;inset:0;z-index:0;transition:background .5s}
 .rh-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,255,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(212,255,0,.025) 1px,transparent 1px);background-size:72px 72px;animation:gridDrift 30s linear infinite}
 .rh-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80vw;height:80vw;background:radial-gradient(circle,rgba(212,255,0,.09) 0%,transparent 60%);animation:gP 6s ease-in-out infinite alternate}
-.rh-watermark{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:55vw;opacity:.05;pointer-events:none;color:var(--y)}
+.rh-watermark{position:absolute;z-index:4;right:-5%;top:50%;transform:translateY(-50%);width:55vw;opacity:.05;pointer-events:none;color:var(--y)}
 .rh-year{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.4em;text-transform:uppercase;color:var(--y);margin-bottom:20px;display:block;animation:riseUp .8s .6s both}
 .rh-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-.01em;line-height:.95;margin-bottom:20px;color:#ffffff;animation:riseUp .8s .8s both}
 .rh-tagline{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(22px,3.5vw,42px);text-transform:uppercase;color:var(--y);letter-spacing:.05em;margin-bottom:28px;animation:riseUp .8s 1s both}
@@ -585,7 +585,7 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
   .rg-grid{grid-template-columns:1fr!important}.rg-item.tall{grid-row:span 1}
   .r-foot-grid{grid-template-columns:1fr!important;gap:36px}.r-foot-bar{flex-direction:column;gap:10px;text-align:center}
   .r-stat{flex:1 1 50%;border-bottom:1px solid rgba(0,0,0,.1);border-right:none}.r-stat:nth-child(odd){border-right:1px solid rgba(0,0,0,.1)}
-  .rh{padding-top:160px;min-height:auto;padding-bottom:80px;height:auto}.rh-content{padding:0 20px;max-width:100%}
+  .rh{padding-top:160px;min-height:auto;padding-bottom:80px;height:auto}.rh-content{position:relative;z-index:2;padding:0 20px;max-width:100%}
   .rh-title{font-size:clamp(30px,8vw,50px)}.rh-tagline{font-size:clamp(16px,5vw,28px)}.rh-sub{font-size:14px;margin-bottom:32px}
   .rh-btns{flex-direction:column;align-items:center;gap:12px}
   .rh-btns .btn-primary,.rh-btns .btn-ghost,.btn-dk,.btn-dk-out{width:100%;max-width:320px;justify-content:center}
@@ -635,6 +635,16 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
 .splash-bar{width:100%;height:2px;background:rgba(255,255,255,.1);border-radius:0}
 .splash-progress{height:100%;background:var(--y);width:0%;transition:width .05s linear}
 .splash-logo{display:none}
+
+/* ── RASA HERO GALLERY ── */
+.rh-gallery{position:absolute;inset:0;z-index:1;overflow:hidden}
+.rh-slides{display:flex;width:100%;height:100%}
+.rh-slide{min-width:100%;height:100%;position:relative;flex-shrink:0}
+.rh-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18;display:block}
+.rh-gallery-overlay{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at center,rgba(7,7,7,.5) 0%,rgba(7,7,7,.9) 100%)}
+.t-yellow .rh-slide img{opacity:.08}
+.t-light .rh-slide img{opacity:.08}
+.t-white .rh-slide img{opacity:.06}
 </style>
 
 </head>
@@ -1156,6 +1166,16 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
 
   <div class="rh" id="rasa-top">
     <div class="rh-bg"><div class="rh-grid"></div><div class="rh-glow"></div></div>
+    <div class="rh-gallery" id="rhGallery">
+      <div class="rh-slides" id="rhSlides">
+        <div class="rh-slide"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80&fit=crop" alt="Award ceremony"></div>
+        <div class="rh-slide"><img src="https://images.unsplash.com/photo-1540747913346-19212a4cf528?w=1200&q=80&fit=crop" alt="Sports award"></div>
+        <div class="rh-slide"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80&fit=crop" alt="Football"></div>
+        <div class="rh-slide"><img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200&q=80&fit=crop" alt="Athletes"></div>
+        <div class="rh-slide"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1200&q=80&fit=crop" alt="Event stage"></div>
+      </div>
+      <div class="rh-gallery-overlay"></div>
+    </div>
     <div class="rh-watermark" aria-hidden="true"><svg viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%"><path fill="currentColor" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="currentColor" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="currentColor" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="currentColor" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
     <div class="rh-content">
       <div class="rh-logo rv"><svg width="200" height="200" viewBox="265 140 312 312" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0;"><rect x="265" y="140" width="312" height="312" fill="#0A0A0A" rx="20"/><path fill="#D4FF00" d="M278.68,154.31h133.59v50.76l-16.03,16.03h16.03v66.79h-32.25v-50.76l-69.08,10.69v40.07h-32.25v-133.58ZM380.01,205.07v-18.51h-69.08v29.01l69.08-10.49Z"/><path fill="#D4FF00" d="M429.63,154.31h133.58v133.58h-32.25v-32.63h-69.08v32.63h-32.25v-133.58ZM461.88,223.2h69.08v-36.64h-69.08v36.64Z"/><path fill="#D4FF00" d="M278.68,397.82v-93.13h133.59v32.25h-101.33v23.66l69.08-10.69h32.25v88.36h-133.59v-32.25h101.33v-23.85l-101.33,15.65Z"/><path fill="#D4FF00" d="M429.63,304.69h133.59v133.59h-32.25v-32.64h-69.08v32.64h-32.25v-133.59ZM461.88,373.58h69.08v-36.64h-69.08v36.64Z"/></svg></div>
@@ -1564,6 +1584,24 @@ function startGallery(){
 }
 startGallery();
 
+// ── RASA HERO GALLERY ──
+let rhCurrent=0;
+const rhTotal=5;
+let rhTimer;
+function goRhSlide(n){
+  const slides=document.getElementById('rhSlides');
+  if(!slides)return;
+  rhCurrent=(n+rhTotal)%rhTotal;
+  slides.style.transform='translateX(-'+(rhCurrent*100)+'%)';
+  slides.style.transition='transform 1.2s ease';
+}
+function startRhGallery(){
+  if(!document.getElementById('rhSlides'))return;
+  clearInterval(rhTimer);
+  rhTimer=setInterval(()=>goRhSlide(rhCurrent+1),5000);
+}
+startRhGallery();
+
 // ── FORMS ──
 function subNl(e){e.preventDefault();document.getElementById('nlOk').style.display='block';e.target.reset();}
 function subBk(e){e.preventDefault();document.getElementById('bkOk').style.display='block';e.target.reset();}
@@ -1598,80 +1636,136 @@ function openAccredLink(eventName,linkKey){
 }
 
 // ── VOTING ──
-let currentVoteCat='Football';
-const voteData={
-  Football:[{name:'Yannick Mukunzi',club:'APR FC',emoji:'⚽'},{name:'Djihad Bizimana',club:'Rayon Sports',emoji:'⚽'},{name:'Kevin Muhire',club:'AS Kigali',emoji:'⚽'}],
-  Basketball:[{name:'Lionel Hakizimana',club:'Patriots BBC',emoji:'🏀'},{name:'Thierry Ndikumana',club:'REG BBC',emoji:'🏀'},{name:'Samuel Nkusi',club:'APR BBC',emoji:'🏀'}],
-  Cycling:[{name:'Joseph Areruya',club:'Team Rwanda',emoji:'🚴'},{name:'Moise Mugisha',club:'Team Rwanda',emoji:'🚴'},{name:'Eric Manizabayo',club:'Team Rwanda',emoji:'🚴'}],
-  Athletics:[{name:'Diane Nukuri',club:'National Team',emoji:'🏃'},{name:'Salome Nyirarukundo',club:'National Team',emoji:'🏃'},{name:'Cleophas Nzayisenga',club:'National Team',emoji:'🏃'}],
-  Coach:[{name:'Djuma Shaaban',club:'APR FC',emoji:'🎽'},{name:'Justus Mugisha',club:'Patriots BBC',emoji:'🎽'},{name:'Jacky Ndayisenga',club:'National Team',emoji:'🎽'}]
-};
-function selectVoteCategory(cat){
-  currentVoteCat=cat;
-  document.querySelectorAll('.vcat').forEach(b=>b.classList.toggle('on',b.textContent.trim()===cat));
-  renderVoteGrid();
+var currentVoteCat='football';
+
+function getVoteCategories(){
+  var saved=localStorage.getItem('rasa_categories');
+  if(saved){try{return JSON.parse(saved);}catch(e){}}
+  return [{key:'football',name:'Football',emoji:'⚽'},{key:'basketball',name:'Basketball',emoji:'🏀'},{key:'cycling',name:'Cycling',emoji:'🚴'},{key:'athletics',name:'Athletics',emoji:'🏃'},{key:'coach',name:'Coach',emoji:'🎽'}];
 }
-function renderVoteGrid(){
-  const grid=document.getElementById('voteGrid');
+
+function getVoteCandidates(key){
+  var saved=localStorage.getItem('rasa_candidates_'+key);
+  if(saved){try{return JSON.parse(saved);}catch(e){}}
+  var defaults={
+    football:[{name:'Yannick Mukunzi',club:'APR FC',emoji:'⚽'},{name:'Djihad Bizimana',club:'Rayon Sports',emoji:'⚽'},{name:'Kevin Muhire',club:'AS Kigali',emoji:'⚽'}],
+    basketball:[{name:'Lionel Hakizimana',club:'Patriots BBC',emoji:'🏀'},{name:'Thierry Ndikumana',club:'REG BBC',emoji:'🏀'},{name:'Samuel Nkusi',club:'APR BBC',emoji:'🏀'}],
+    cycling:[{name:'Joseph Areruya',club:'Team Rwanda',emoji:'🚴'},{name:'Moise Mugisha',club:'Team Rwanda',emoji:'🚴'},{name:'Eric Manizabayo',club:'Team Rwanda',emoji:'🚴'}],
+    athletics:[{name:'Diane Nukuri',club:'National Team',emoji:'🏃'},{name:'Salome Nyirarukundo',club:'National Team',emoji:'🏃'},{name:'Cleophas Nzayisenga',club:'National Team',emoji:'🏃'}],
+    coach:[{name:'Djuma Shaaban',club:'APR FC',emoji:'🎽'},{name:'Justus Mugisha',club:'Patriots BBC',emoji:'🎽'},{name:'Jacky Ndayisenga',club:'National Team',emoji:'🎽'}]
+  };
+  return defaults[key]||[];
+}
+
+function buildVoteCatTabs(){
+  var cats=getVoteCategories();
+  var container=document.getElementById('voteCats');
+  if(!container)return;
+  while(container.firstChild)container.removeChild(container.firstChild);
+  for(var i=0;i<cats.length;i++){
+    (function(cat,idx){
+      var btn=document.createElement('button');
+      btn.className='vcat'+(idx===0?' on':'');
+      btn.textContent=cat.emoji+' '+cat.name;
+      btn.onclick=function(){setVoteCat(cat.key,btn);};
+      container.appendChild(btn);
+    })(cats[i],i);
+  }
+  if(cats.length>0)currentVoteCat=cats[0].key;
+}
+
+function setVoteCat(key,el){
+  currentVoteCat=key;
+  var btns=document.querySelectorAll('.vcat');
+  for(var i=0;i<btns.length;i++) btns[i].classList.remove('on');
+  if(el) el.classList.add('on');
+  var result=document.getElementById('voteResult');
+  if(result) result.style.display='none';
+  showVoteGrid();
+}
+
+function showVoteGrid(){
+  var grid=document.getElementById('voteGrid');
+  var result=document.getElementById('voteResult');
   if(!grid)return;
-  const cats=voteData[currentVoteCat]||[];
-  const userVotes=JSON.parse(localStorage.getItem('rasa_user_votes')||'{}');
-  const votes=JSON.parse(localStorage.getItem('rasa_votes')||'{}');
-  const catVotes=votes[currentVoteCat]||{};
-  const voted=userVotes[currentVoteCat];
-  grid.innerHTML=cats.map((c,i)=>{
-    const vcount=catVotes[c.name]||0;
-    const isVoted=voted===c.name;
-    return `<div class="vote-card${isVoted?' voted':''}" onclick="castVote('${c.name}')">
-      ${isVoted?'':''}
-      <div class="vc-avatar">${c.emoji}</div>
-      <div class="vc-name">${c.name}</div>
-      <div class="vc-club">${c.club}</div>
-      <div class="vc-votes">${vcount}</div>
-      <div class="vc-votes-lbl">votes</div>
-      <button class="vote-btn" ${voted?'disabled':''} onclick="event.stopPropagation();castVote('${c.name}')">${isVoted?'✓ Voted':'Vote →'}</button>
-    </div>`;
-  }).join('');
+  if(result) result.style.display='none';
+  grid.style.display='';
+  var candidates=getVoteCandidates(currentVoteCat);
+  var userVotes=JSON.parse(localStorage.getItem('rasa_user_votes')||'{}');
+  var votes=JSON.parse(localStorage.getItem('rasa_votes')||'{}');
+  var catVotes=votes[currentVoteCat]||{};
+  var voted=userVotes[currentVoteCat];
+  var html='';
+  for(var i=0;i<candidates.length;i++){
+    var cd=candidates[i];
+    var vcount=catVotes[cd.name]||0;
+    var isVoted=voted===cd.name;
+    var alreadyVoted=!!voted;
+    var dimStyle=(alreadyVoted&&!isVoted)?'cursor:default;opacity:.65':'';
+    var btnLabel=isVoted?'\u2713 Voted':alreadyVoted?'\u2014':'Vote \u2192';
+    html+='<div class="vote-card'+(isVoted?' voted':'')+'" style="'+dimStyle+'"'+(alreadyVoted?'':' onclick="castVote(\''+cd.name+'\')"')+'>';
+    html+='<div class="vc-avatar">'+cd.emoji+'</div>';
+    html+='<div class="vc-name">'+cd.name+'</div>';
+    html+='<div class="vc-club">'+cd.club+'</div>';
+    html+='<div class="vc-votes">'+vcount+'</div>';
+    html+='<div class="vc-votes-lbl">votes</div>';
+    html+='<button class="vote-btn"'+(alreadyVoted?' disabled':'')+(!alreadyVoted?' onclick="event.stopPropagation();castVote(\''+cd.name+'\')"':'')+'>'+btnLabel+'</button>';
+    html+='</div>';
+  }
+  if(!candidates.length) html='<div style="grid-column:1/-1;text-align:center;padding:40px;color:rgba(255,255,255,.4)">No candidates in this category yet.</div>';
+  grid.innerHTML=html;
 }
+
 function castVote(candidateName){
-  const userVotes=JSON.parse(localStorage.getItem('rasa_user_votes')||'{}');
+  var userVotes=JSON.parse(localStorage.getItem('rasa_user_votes')||'{}');
   if(userVotes[currentVoteCat]){showToast('You already voted in this category!');return;}
   userVotes[currentVoteCat]=candidateName;
   localStorage.setItem('rasa_user_votes',JSON.stringify(userVotes));
-  const votes=JSON.parse(localStorage.getItem('rasa_votes')||'{}');
-  if(!votes[currentVoteCat])votes[currentVoteCat]={};
+  var votes=JSON.parse(localStorage.getItem('rasa_votes')||'{}');
+  if(!votes[currentVoteCat]) votes[currentVoteCat]={};
   votes[currentVoteCat][candidateName]=(votes[currentVoteCat][candidateName]||0)+1;
   localStorage.setItem('rasa_votes',JSON.stringify(votes));
-  showToast('✓ Vote cast for '+candidateName+'!');
-  renderVoteGrid();
+  showToast('\u2713 Vote cast for '+candidateName+'!');
+  showVoteGrid();
 }
+
 function showToast(msg){
-  const t=document.getElementById('voteToast');
+  var t=document.getElementById('voteToast');
   if(!t)return;
-  t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),3000);
+  t.textContent=msg;
+  t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},3000);
 }
+
 function showVoteResults(){
-  const grid=document.getElementById('voteGrid');
-  if(!grid)return;
-  const votes=JSON.parse(localStorage.getItem('rasa_votes')||'{}');
-  const cats=voteData[currentVoteCat]||[];
-  const catVotes=votes[currentVoteCat]||{};
-  const total=cats.reduce((s,c)=>s+(catVotes[c.name]||0),0)||1;
-  grid.innerHTML=`<div class="vote-result">
-    <div class="vr-title">Results: ${currentVoteCat}</div>
-    <div class="vr-bars">${cats.map(c=>{
-      const v=catVotes[c.name]||0;
-      const pct=Math.round(v/total*100);
-      return `<div class="vr-row"><div class="vr-name">${c.name}</div><div class="vr-bar-wrap"><div class="vr-bar" style="width:${pct}%"><span class="vr-pct">${pct}%</span></div></div><div class="vr-count">${v} votes</div></div>`;
-    }).join('')}</div>
-    <button class="vr-back" onclick="renderVoteGrid()">← Back to Voting</button>
-  </div>`;
+  var grid=document.getElementById('voteGrid');
+  var result=document.getElementById('voteResult');
+  var vrBars=document.getElementById('vrBars');
+  var vrCat=document.getElementById('vrCatName');
+  if(!grid||!result||!vrBars)return;
+  grid.style.display='none';
+  result.style.display='block';
+  var cats=getVoteCategories();
+  var cat=cats.find(function(c){return c.key===currentVoteCat;});
+  if(vrCat) vrCat.textContent=cat?cat.emoji+' '+cat.name:currentVoteCat;
+  var candidates=getVoteCandidates(currentVoteCat);
+  var votes=JSON.parse(localStorage.getItem('rasa_votes')||'{}');
+  var catVotes=votes[currentVoteCat]||{};
+  var total=candidates.reduce(function(s,cd){return s+(catVotes[cd.name]||0);},0)||1;
+  var barsHtml='';
+  var sorted=candidates.slice().sort(function(a,b){return (catVotes[b.name]||0)-(catVotes[a.name]||0);});
+  for(var i=0;i<sorted.length;i++){
+    var v=catVotes[sorted[i].name]||0;
+    var pct=Math.round(v/total*100);
+    barsHtml+='<div class="vr-row"><div class="vr-name">'+sorted[i].name+'</div>';
+    barsHtml+='<div class="vr-bar-wrap"><div class="vr-bar" style="width:'+pct+'%"><span class="vr-pct">'+pct+'%</span></div></div>';
+    barsHtml+='<div class="vr-count">'+v+' votes</div></div>';
+  }
+  vrBars.innerHTML=barsHtml;
 }
-document.addEventListener('DOMContentLoaded',()=>{
-  renderVoteGrid();
-  loadLiveEvents();
-});
+
+function selectVoteCategory(key){setVoteCat(key,null);}
+
 
 // ── COUNTDOWN ──
 function updateCountdown(){
@@ -1721,6 +1815,11 @@ window.addEventListener('load',function(){
     v.addEventListener('ended',function(){clearInterval(t);closeSplash();});
   }
 });
+// ── INIT ──
+buildVoteCatTabs();
+showVoteGrid();
+startGallery();
+startRhGallery();
 </script>
 </body>
 </html>
