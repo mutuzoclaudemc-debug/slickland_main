@@ -839,7 +839,7 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
         <button class="ntab" onclick="nTab(this)">Industry</button>
       </div>
     </div>
-    <div class="news-grid rv d2">
+    <div class="news-grid rv d2" id="siteNewsGrid">
       <div class="nc"><div class="nc-bg">RASA 2026</div><div class="nc-overlay"></div><div class="nc-inner"><div class="nc-meta"><div class="nc-tag">RASA 2026</div><div class="nc-title">RASA 2026 Nominations Now Open Across All Categories</div><div class="nc-date">June 2026 <div class="nc-arr">→</div></div></div></div></div>
       <div class="nc"><div class="nc-bg">INGENZI</div><div class="nc-overlay"></div><div class="nc-inner"><div class="nc-meta"><div class="nc-tag">Grassroots</div><div class="nc-title">Ingenzi Program Reaches All 30 Districts</div><div class="nc-date">March 2025 <div class="nc-arr">→</div></div></div></div></div>
       <div class="nc"><div class="nc-bg">PARA</div><div class="nc-overlay"></div><div class="nc-inner"><div class="nc-meta"><div class="nc-tag">Inclusion</div><div class="nc-title">Sport on the Wheel Partnership Expands Para-Sports</div><div class="nc-date">March 2025 <div class="nc-arr">→</div></div></div></div></div>
@@ -854,8 +854,10 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
     <div class="about-grid">
       <div class="rv" style="position:relative;min-height:400px">
         <div class="rasa-quad">
-          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(52px,10vw,96px);color:var(--y);letter-spacing:-.02em;line-height:1;text-transform:uppercase">Slick<br>land</div>
-          <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(212,255,0,.4);font-weight:600">Logo coming soon</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(52px,10vw,96px);letter-spacing:-.02em;line-height:1;text-transform:uppercase;display:flex;flex-direction:column">
+            <span style="color:#fff">Slick</span><span style="color:var(--y)">land</span>
+          </div>
+          <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.25);font-weight:600;margin-top:8px">Event & Sports Management</div>
         </div>
         <div class="float-tag" style="top:-20px;right:-20px"><span>🏆</span> Rwanda's #1 Sports Awards</div>
         <div class="float-tag2" style="bottom:20px;left:-20px"><span class="ft2-text">Founded by Athletes</span></div>
@@ -921,7 +923,7 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
 <section class="partners-sec" id="partners">
   <div class="wrap">
     <div class="rv"><div class="slbl">Our Network</div><h2 class="sh">Partners & <span class="y">Supporters</span></h2></div>
-    <div class="partners-inner rv d1">
+    <div class="partners-inner rv d1" id="sitePartnersInner">
       <span class="p-lbl">Trusted by</span>
       <span class="pchip">🏛️ Rwanda Sports Commission</span>
       <span class="pchip">🏥 Ministry of Sports</span>
@@ -1119,7 +1121,7 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
   <div class="wrap">
     <div class="ft-grid">
       <div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase;color:var(--y);letter-spacing:-.01em">Slickland <span style="color:rgba(255,255,255,.3)">Ltd</span></div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase;color:var(--y);letter-spacing:-.01em"><span style="color:#fff">Slick</span><span style="color:var(--y)">land</span> <span style="color:rgba(255,255,255,.3)">Ltd</span></div>
         <p class="ft-about-text">Rwanda's premier sports and event management company. Organised by former athletes, dedicated to celebrating excellence and inspiring generations.</p>
         <div class="socials">
           <a class="soc" href="https://www.instagram.com/rasa_rwanda/" target="_blank">IG</a>
@@ -1342,7 +1344,7 @@ footer{background:var(--blk);border-top:1px solid rgba(255,255,255,.06);padding:
         <div><div class="rslbl">Gallery</div><h2 class="rsh">Event <span class="y">Highlights</span></h2></div>
         <a href="#" class="btn-ghost rv d1">View All →</a>
       </div>
-      <div class="rg-grid rv d2">
+      <div class="rg-grid rv d2" id="siteRgGrid">
         <div class="rg-item tall"><div class="rg-bg">RASA 2025</div><div class="rg-line"></div><div class="rg-ov"><div class="rg-tag">RASA Gala 2025</div><div class="rg-name">Champions Night</div><div class="rg-meta">Kigali Convention Centre · March 2025</div></div></div>
         <div class="rg-item"><div class="rg-bg">Awards</div><div class="rg-line"></div><div class="rg-ov"><div class="rg-tag">Best Athlete</div><div class="rg-name">Award Ceremony</div><div class="rg-meta">2025 Edition</div></div></div>
         <div class="rg-item"><div class="rg-bg">Ingenzi</div><div class="rg-line"></div><div class="rg-ov"><div class="rg-tag">Grassroots</div><div class="rg-name">Ingenzi Program</div><div class="rg-meta">Nationwide 2024</div></div></div>
@@ -1820,6 +1822,154 @@ buildVoteCatTabs();
 showVoteGrid();
 startGallery();
 startRhGallery();
+
+
+// ══════════════════════════════════════════════════════════════════
+// DYNAMIC CONTENT — reads from admin localStorage, falls back to static
+// ══════════════════════════════════════════════════════════════════
+
+// ── NEWS ──
+var DEFAULT_NEWS = [
+  {title:'RASA 2026 Nominations Now Open Across All Categories', tag:'RASA 2026', date:'June 2026', bg:'RASA 2026'},
+  {title:'Ingenzi Program Reaches All 30 Districts', tag:'Grassroots', date:'March 2025', bg:'INGENZI'},
+  {title:'Sport on the Wheel Partnership Expands Para-Sports', tag:'Inclusion', date:'March 2025', bg:'PARA'},
+  {title:'RASA Gala 2025 — A Night of Champions at KCC', tag:'Event', date:'March 2025', bg:'GALA'},
+  {title:'Rwanda Cycling Federation Signs MoU with Slickland', tag:'Partnership', date:'Feb 2025', bg:'CYCLING'}
+];
+function renderSiteNews(){
+  var grid = document.getElementById('siteNewsGrid');
+  if(!grid) return;
+  var news = JSON.parse(localStorage.getItem('sl_news') || '[]');
+  var items = news.length ? news : DEFAULT_NEWS;
+  grid.innerHTML = items.slice(0,5).map(function(n,i){
+    var bg = n.bg || n.tag || 'NEWS';
+    var img = n.img ? 'background-image:url('+n.img+');background-size:cover;background-position:center' : '';
+    return '<div class="nc'+(i===0?' nc-feat':'')+'">'
+      +'<div class="nc-bg"'+(img?' style="'+img+'"':'')+'>'+(!img?bg:'')+'</div>'
+      +'<div class="nc-overlay"></div>'
+      +'<div class="nc-inner"><div class="nc-meta">'
+      +'<div class="nc-tag">'+n.tag+'</div>'
+      +'<div class="nc-title">'+n.title+'</div>'
+      +'<div class="nc-date">'+n.date+' <div class="nc-arr">→</div></div>'
+      +'</div></div></div>';
+  }).join('');
+}
+
+// ── RASA GALLERY ──
+var DEFAULT_RG = [
+  {name:'Champions Night', tag:'RASA Gala 2025', meta:'Kigali Convention Centre · March 2025', bg:'RASA 2025', tall:true},
+  {name:'Award Ceremony', tag:'Best Athlete', meta:'2025 Edition', bg:'Awards', tall:false},
+  {name:'Ingenzi Program', tag:'Grassroots', meta:'Nationwide 2024', bg:'Ingenzi', tall:false},
+  {name:'Tour du Rwanda', tag:'Team Rwanda', meta:'2025 Edition', bg:'Cycling', tall:false},
+  {name:'Para-Sports Day', tag:'Inclusion', meta:'Sport on the Wheel', bg:'Para', tall:false}
+];
+function renderSiteGallery(){
+  var grid = document.getElementById('siteRgGrid');
+  if(!grid) return;
+  var photos = JSON.parse(localStorage.getItem('sl_photos') || '[]');
+  if(photos.length >= 3){
+    grid.innerHTML = photos.slice(0,5).map(function(p,i){
+      var img = p.url ? 'background-image:url('+p.url+');background-size:cover;background-position:center' : '';
+      return '<div class="rg-item'+(i===0?' tall':'')+'">'
+        +'<div class="rg-bg"'+(img?' style="'+img+'"':'')+'>'+(!img?'Photo':'')+'</div>'
+        +'<div class="rg-line"></div>'
+        +'<div class="rg-ov"><div class="rg-tag">'+(p.cat||'Gallery')+'</div>'
+        +'<div class="rg-name">'+p.title+'</div>'
+        +'<div class="rg-meta">'+(p.date||'')+'</div></div>'
+        +'</div>';
+    }).join('');
+  } else {
+    // Use defaults
+    grid.innerHTML = DEFAULT_RG.map(function(g){
+      return '<div class="rg-item'+(g.tall?' tall':'')+'">'
+        +'<div class="rg-bg">'+g.bg+'</div>'
+        +'<div class="rg-line"></div>'
+        +'<div class="rg-ov"><div class="rg-tag">'+g.tag+'</div>'
+        +'<div class="rg-name">'+g.name+'</div>'
+        +'<div class="rg-meta">'+g.meta+'</div></div>'
+        +'</div>';
+    }).join('');
+  }
+}
+
+// ── PARTNERS ──
+var DEFAULT_PARTNERS = [
+  {emoji:'🏛️', name:'Rwanda Sports Commission'},
+  {emoji:'🏥', name:'Ministry of Sports'},
+  {emoji:'♿', name:'Sport on the Wheel'},
+  {emoji:'🚴', name:'Rwanda Cycling Federation'},
+  {emoji:'⚽', name:'Rwanda Football Federation'},
+  {emoji:'🏀', name:'Rwanda Basketball Federation'},
+  {emoji:'📺', name:'Rwanda TV'},
+  {emoji:'📰', name:'The New Times'},
+  {emoji:'🌍', name:'CAF'}
+];
+function renderSitePartners(){
+  var inner = document.getElementById('sitePartnersInner');
+  if(!inner) return;
+  // Partners come from admin events (sponsors) or use defaults
+  // For now use defaults — admin can extend later
+  var chips = DEFAULT_PARTNERS.map(function(p){
+    return '<span class="pchip">'+p.emoji+' '+p.name+'</span>';
+  }).join('');
+  // Keep the label
+  inner.innerHTML = '<span class="p-lbl">Trusted by</span>' + chips;
+}
+
+// ── HERO GALLERY SLIDES ── (update from admin photos if available)
+function renderHeroGallery(){
+  var slidesEl = document.getElementById('hgSlides');
+  if(!slidesEl) return;
+  var photos = JSON.parse(localStorage.getItem('sl_photos') || '[]');
+  if(photos.length < 3) return; // not enough admin photos — keep Unsplash defaults
+  var used = photos.slice(0,5);
+  slidesEl.innerHTML = used.map(function(p){
+    var src = p.url || '';
+    var label = p.title || '';
+    return '<div class="hg-slide" style="background:#0a0a0a">'
+      +(src?'<img src="'+src+'" alt="'+label+'" style="width:100%;height:100%;object-fit:cover;opacity:.6;display:block">':'')
+      +'<div class="hg-slide-label">'+label+'</div>'
+      +'</div>';
+  }).join('');
+  hgTotal = used.length;
+  hgCurrent = 0;
+  clearInterval(hgTimer);
+  startGallery();
+}
+
+// ── EVENTS → Scores-style ticker ──
+function renderSiteEvents(){
+  // If admin has events, show them in the breaking ticker
+  var ticker = document.querySelector('.ticker-inner');
+  if(!ticker) return;
+  var events = JSON.parse(localStorage.getItem('sl_events') || '[]');
+  if(!events.length) return;
+  var liveEvents = events.filter(function(e){return e.status==='live'||e.status==='upcoming';}).slice(0,5);
+  if(!liveEvents.length) return;
+  var existing = ticker.innerHTML;
+  var eventTicks = liveEvents.map(function(e){
+    return '<span class="ticker-item"><div class="ticker-dot"></div>'
+      +(e.status==='live'?'● LIVE: ':'')+e.name+' · '+e.date+'</span>';
+  }).join('');
+  ticker.innerHTML = eventTicks + existing;
+}
+
+// ── INIT ALL DYNAMIC CONTENT ──
+function initDynamicContent(){
+  renderSiteNews();
+  renderSiteGallery();
+  renderSitePartners();
+  renderHeroGallery();
+  renderSiteEvents();
+}
+// Run on load
+if(document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', initDynamicContent);
+} else {
+  initDynamicContent();
+}
+// Also run after a short delay to catch any late localStorage data
+setTimeout(initDynamicContent, 300);
 </script>
 </body>
 </html>
